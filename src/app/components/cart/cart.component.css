@@ -1,0 +1,46 @@
+.cart-item-details-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+  }
+  
+  .cart-item {
+    flex: 1; /* Allow the image to grow to fill available space */
+    /* margin-right: 16px;  */
+    margin-left: 10rem;
+  }
+  
+  .cart-item-details {
+    flex: 2; /* Allow the details to grow to fill available space */
+    margin-left: 20rem;
+  }
+  
+  button{
+   margin-left: 50rem;
+   /* width: 10rem; */
+   
+  }
+  .btn mat-card-actions{
+    display: inline-block;
+    
+  }
+  input{
+    width: 2rem;
+  }
+
+
+
+  /* Add this CSS to your component's CSS file or a global stylesheet */
+
+.example-button-row {
+  display: flex; 
+  align-items: center;
+  margin-left: 50rem;
+  margin-top: -2rem;
+}
+
+.button {
+  margin: 0 5px; /* Add some margin between the buttons */
+}
+.count{
+  text-align: center;
+}

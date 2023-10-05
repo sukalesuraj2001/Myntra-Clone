@@ -1,0 +1,382 @@
+<app-crousel></app-crousel>
+
+<!-- <div class="container-fluid mt-5">
+    <h3>NOW OR NEVER DEALS</h3>
+    <div class="row mt-3">
+        <div *ngFor="let x of products" class="col-md-2 mb-4">
+
+            <mat-card class="example-card">
+
+                <img mat-card-image src="{{x.url}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>{{x.name}} </p>
+                    <p>{{x.price | currency:"INR"}} </p>
+
+                    <app-rating [rate]="x.rating"></app-rating>
+                    <button (click)="addToCart(x)" mat-raised-button color="primary">Add To Cart</button>
+
+
+
+                </mat-card-content>
+            </mat-card>
+
+
+
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl1.png" (click)="setCategory('Rebook')" routerLink="ethenticWear"  class="d-block w-100" alt="Rebook">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl2.png" (click)="setCategory('Jack')" routerLink="ethenticWear"  class="d-block w-100" alt="Jack&Jones">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl3.png" class="d-block w-100" alt="Image 3">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl4.png" class="d-block w-100" alt="Image 4">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl5.png" class="d-block w-100" alt="Image 5">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl6.png" class="d-block w-100" alt="Image 6">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl7.png" class="d-block w-100" alt="Image 7">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl8.png" class="d-block w-100" alt="Image 8">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl9.png" class="d-block w-100" alt="Image 9">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl10.png" class="d-block w-100" alt="Image 10">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl11.png" class="d-block w-100" alt="Image 11">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider1/sl9.png" class="d-block w-100" alt="Image 12">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+ <!-- second slider start  -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl1.png" class="d-block w-100" alt="Image 1">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl2.png" class="d-block w-100" alt="Image 2">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl3.png" class="d-block w-100" alt="Image 3">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl4.png" class="d-block w-100" alt="Image 4">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl5.png" class="d-block w-100" alt="Image 5">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl6.png" class="d-block w-100" alt="Image 6">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl7.png" class="d-block w-100" alt="Image 7">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl8.png" class="d-block w-100" alt="Image 8">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl9.png" class="d-block w-100" alt="Image 9">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl3.png" class="d-block w-100" alt="Image 10">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl4.png" class="d-block w-100" alt="Image 11">
+                  </div>
+                  <div class="col-2">
+                    <img src="/assets/slider2/sl1.png" class="d-block w-100" alt="Image 12">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- for shoes categaries -->
+<br>
+<!-- <div class="container-fluid mt-5">
+    <h3>FESTIVE CRAZY OFFERS</h3>
+    <div class="row mt-3">
+        <div *ngFor="let x of shoes" class="col-md-2 mb-4">
+
+            <mat-card class="example-card">
+
+                <img class="pimage" mat-card-image src="{{x.url}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>{{x.name}} </p>
+                    <p>{{x.price | currency:"INR"}} </p>
+
+                    <app-rating [rate]="x.rating"></app-rating>
+
+                    <button (click)="addToCart(x)" mat-raised-button color="primary">Add To Cart</button>
+
+
+                </mat-card-content>
+            </mat-card>
+
+
+
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="container-fluid mt-5">
+    <h3>SHOP BY CATEGORY</h3>
+    <div class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" routerLink="ethenticWear" mat-card-image src="/assets/Category/cat1.png" alt="#"
+                (click)="setCategory('Ethentic Wear') "
+                >
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" routerLink="ethenticWear" mat-card-image src="/assets/Category/cat2.png" alt="#"     (click)="setCategory('Casual Wear') " >
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" routerLink="ethenticWear" mat-card-image src="/assets/Category/cat3.png" alt="#"  (click)="setCategory('Active Wear') ">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat4.png" alt="#"   (click)="setCategory('Active Wear') " >
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat5.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat6.png" alt="#">
+            </mat-card>
+        </div>
+    </div>
+    <div class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50"  mat-card-image src="/assets/Category/cat1.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat2.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat3.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat4.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat5.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat6.png" alt="#">
+            </mat-card>
+        </div>
+    </div>
+    <div class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat1.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat2.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat3.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat4.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat5.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat6.png" alt="#">
+            </mat-card>
+        </div>
+    </div>
+    <div class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat1.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat2.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat3.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat4.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat5.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat6.png" alt="#">
+            </mat-card>
+        </div>
+    </div>
+    <div class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat1.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat2.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat3.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat4.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat5.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat6.png" alt="#">
+            </mat-card>
+        </div>
+    </div>
+    
+</div>
+<div class="container ms-5">
+    <div  id="container"  class="row mt-3 ">
+        <div class="col-md-2 mb-4 my-2 ">
+            <mat-card class="example-card">
+                <img class="pimage h-100" mat-card-image src="/assets/Category/cat1.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat2.png" alt="#">
+            </mat-card>
+        </div>
+        <div class="col-md-2 mb-4 my-2">
+            <mat-card class="example-card">
+                <img class="pimage h-50" mat-card-image src="/assets/Category/cat3.png" alt="#">
+            </mat-card>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+ 
+
+  

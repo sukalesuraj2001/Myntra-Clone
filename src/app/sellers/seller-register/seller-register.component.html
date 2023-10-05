@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+   <div class="mytra-login">
+    <form *ngIf="showLoginForm" (ngSubmit)="onLoginSubmit(loginForm.value)  "   [formGroup]="loginForm">
+      <img src="https://1000logos.net/wp-content/uploads/2022/08/Myntra-Logo.png" alt="Myntra Logo">
+      <h1 class="heading">Welcome to India's Largest Online Fashion Store</h1>
+      <p>Please login to your Seller account</p>
+  
+      <label for="email">Email ID</label>
+      <input type="text" id="email" name="email" formControlName="email" placeholder="Enter your email" required>
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" name="password" placeholder="Enter your password" required>
+  
+      <div class="forgot">
+        <label>
+          <input type="checkbox" id="keep-signed-in">
+          Keep me signed in
+        </label>
+        <a href="#">Forgot Password?</a>
+      </div>
+  
+      <button class="login" type="submit">Login</button>
+      <button class="signup" (click)="showLoginForm = false">Sign Up</button>
+    </form>
+  
+    <form *ngIf="!showLoginForm" #f="ngForm" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
+      <img src="https://1000logos.net/wp-content/uploads/2022/08/Myntra-Logo.png" alt="Myntra Logo">
+      <h1 class="heading">Welcome to India's Largest Online Fashion Store</h1>
+      <p>Create a new Seller account</p>
+  
+      <label for="signup-first-name">First Name</label>
+      <input type="text" id="signup-first-name" formControlName="firstName"  placeholder="Enter your first name" required>
+      
+      
+      
+  
+      <label for="signup-last-name">Last Name</label>
+      <input type="text" id="signup-last-name" formControlName="lastName" name="signup-last-name" placeholder="Enter your last name" required>
+  
+      <label for="signup-email">Email</label>
+      <input type="text" id="signup-email" name="signup-email" formControlName="email" placeholder="Enter your email" required>
+  
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" name="signup-password"  formControlName="password"  placeholder="Create a password" required>
+  
+  
+      <button class="signup" type="submit">Sign Up</button>
+      <button class="login" (click)="showLoginForm = true">Login</button>
+    </form>
+  </div>
+  
+  

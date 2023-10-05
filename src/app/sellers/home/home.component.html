@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2>All Products</h2>
+    <div class="row">
+        <div class="col-md-12 mx-auto mt-5">
+            <table class="table table-hover   ">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Category</th>
+                    <!-- <th scope="col">Description</th> -->
+                    <th scope="col">Price</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let x of products">
+                    <th scope="row">{{x.id}}</th>
+                    
+                    <td>{{x.name}}</td>
+                    <td>{{x.cat}}</td>
+                    <!-- <td>{{x.desc}}</td> -->
+                    <td>{{x.price | currency:'INR'}}</td>
+                    <td>{{x.rating}}</td>
+                    <td><i (click)="remove(x)" class="bi bi-trash"></i></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

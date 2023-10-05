@@ -1,0 +1,26 @@
+
+<div class="container-fluid mt-5">
+ 
+    <div class="row mt-3">
+        <div *ngFor="let x of ethentic" class="col-md-2 mb-4">
+
+            <mat-card class="example-card">
+
+                <img class="pimage" mat-card-image src="{{x.url}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>{{x.name}} </p>
+                    <p>{{x.price | currency:"INR"}} </p>
+
+                    <app-rating [rate]="x.rating"></app-rating>
+
+                    <button  mat-raised-button color="primary" (click)="addToCart(x)">Add To Cart</button>
+
+
+                </mat-card-content>
+            </mat-card>
+
+
+
+        </div>
+    </div>
+</div>

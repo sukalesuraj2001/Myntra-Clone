@@ -1,0 +1,51 @@
+
+  <mat-card>
+  <mat-card-header>
+    <mat-card-title>My Shopping Cart</mat-card-title>
+    
+    </mat-card-header>
+    <mat-card-content>
+      <ng-container *ngFor="let item of cartItems">
+        <div class="cart-item-details-container">
+          <div class="cart-item mt-4">
+            <img [src]="item.url" alt="{{ item.name }}" class="cart-item-image mt-3">
+          </div>
+          <div class="cart-item-details">
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.cat }}</p>
+            <p>{{ item.desc }}</p>
+            <p> QTY:{{item.qty}}</p>
+           
+
+            <p>Price: {{ item.price | currency :"INR" }}  
+             </p>  <p>Total Price: {{ item.totalprice*item.qty | currency :"INR" }}  
+             </p>
+             <p>inclusive of all taxes</p>
+          </div>
+        </div>
+
+        <div class="example-button-row mt-5">
+          <a mat-raised-button (click)="decrease(item)" class="button">-</a>
+          <input type="text" class="count" [(ngModel)]="item.qty">
+          <a mat-raised-button (click)="increase(item)" class="button">+</a>
+        </div>
+        
+        
+       
+    
+       
+        <mat-card-actions class="mt-2">
+          <button mat-raised-button color="warn">Buy Now</button>
+          <a mat-raised-button color="warn" (click)="remove(item)" class="mx-2" >Remove </a>
+          <a mat-raised-button color="warn" routerLink="/" class="mx-2" >See More </a>
+        </mat-card-actions>
+        <mat-divider></mat-divider>
+        
+      </ng-container>
+    </mat-card-content>
+   
+  </mat-card>
+  
+
+
+  
