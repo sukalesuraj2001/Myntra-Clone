@@ -377,34 +377,6 @@
   ],
   "Cart": [
     {
-      "userId": "1",
-      "id": 26,
-      "name": "Rebook",
-      "desc": "free delivery",
-      "price": 1500,
-      "cat": "Rebook",
-      "url": "/assets/rebook/shoes1.jpeg",
-      "imgname": "Shoes",
-      "width": 200,
-      "code": "M-001",
-      "rating": "4",
-      "qty": 1,
-      "totalprice": 1500
-    },
-    {
-      "userId": "1",
-      "id": 28,
-      "name": "Rebook",
-      "desc": "free delivery",
-      "price": 2500,
-      "cat": "Rebook",
-      "url": "/assets/rebook/shoes3.jpeg",
-      "imgname": "Shoes",
-      "width": 200,
-      "code": "M-001",
-      "rating": "4"
-    },
-    {
       "id": 29,
       "name": "Rebook",
       "desc": "free delivery",
@@ -418,21 +390,6 @@
       "totalprice": 3000,
       "qty": 1,
       "userId": "3"
-    },
-    {
-      "id": 27,
-      "name": "Rebook",
-      "desc": "free delivery",
-      "price": 1800,
-      "cat": "Rebook",
-      "url": "/assets/rebook/shoes2.jpeg",
-      "imgname": "Shoes",
-      "width": 200,
-      "code": "M-001",
-      "rating": "4",
-      "qty": 1,
-      "totalprice": 1800,
-      "userId": "1"
     },
     {
       "id": 30,
@@ -472,6 +429,19 @@
       "code": "M-001",
       "rating": "4",
       "userId": "2"
+    },
+    {
+      "id": 19,
+      "name": "Casual",
+      "desc": "free delivery",
+      "price": 1500,
+      "cat": "Casual Wear",
+      "url": "/assets/casualWear/casual2.jpg",
+      "imgname": "Samsung",
+      "width": 200,
+      "code": "M-001",
+      "rating": "4",
+      "userId": "1"
     }
   ],
   "User": [

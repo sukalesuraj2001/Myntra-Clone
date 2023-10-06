@@ -1,3 +1,8 @@
+
+
+
+
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -6,46 +11,46 @@
                     <h4>Add Product</h4>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)">
                         <div class="mb-3">
                             <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" id="productName" placeholder="Enter product name"
+                            <input type="text" class="form-control"  formControlName="productName" id="productName" placeholder="Enter product name"
                                 required>
                         </div>
                         <div class="mb-3">
                             <label for="productDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="productDescription" rows="4"
+                            <textarea class="form-control"  formControlName="description" id="productDescription" rows="4"
                                 placeholder="Enter product description" required></textarea>
                         </div>
                         <label for="cat" class="form-label">Category</label>
 
-                        <select class="form-select mb-3" id="cat" aria-label="Default select example">
+                        <select class="form-select mb-3"  formControlName="category" id="cat" aria-label="Default select example">
                             <option selected>Select Category</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
                         <div class="mb-3">
-                            <label for="productPrice" class="form-label">Price</label>
-                            <input type="number" class="form-control" id="productPrice"
+                            <label for="productPrice"  class="form-label">Price</label>
+                            <input type="number" formControlName="price" class="form-control" id="productPrice"
                                 placeholder="Enter product price" required>
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Total Price</label>
-                            <input type="number" class="form-control" id="price"
+                            <input type="number" formControlName="totalprice" class="form-control" id="price"
                                 placeholder="Enter Total Price" required>
                         </div>
                         <div class="mb-3">
                             <label for="productImage" class="form-label">Product Image</label>
-                            <input type="file" class="form-control" id="productImage" accept="image/*" required>
+                            <input type="file"  formControlName="image" class="form-control" id="productImage" accept="image/*" required>
                         </div>
                         <div class="mb-3">
                             <label for="qty" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" placeholder="Add Quantity" id="qty" required>
+                            <input type="number" formControlName="qty" class="form-control" placeholder="Add Quantity" id="qty" required>
                         </div>
                         <div class="mb-3">
                             <label for="rating" class="form-label">Rating</label>
-                            <input type="number" class="form-control" placeholder="Add Ratings" id="rating" required>
+                            <input type="number" formControlName="rating" class="form-control" placeholder="Add Ratings" id="rating" required>
                         </div>
                         <div class="btn ">
                             <button type="submit" class="btn btn-primary">Add Product</button>

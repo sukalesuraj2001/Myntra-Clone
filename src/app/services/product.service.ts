@@ -43,7 +43,7 @@ getcount(){
 
   getProducts():Observable<Product[]>{
     // return this.http.get<Product[]>(`${this.apiUrl}/Product`);
-    return this.http.get<Product[]>(`${this.apiUrl}/Product?cat=mobile`);
+    return this.http.get<Product[]>(`${this.apiUrl}/Product`);
   }
 
 

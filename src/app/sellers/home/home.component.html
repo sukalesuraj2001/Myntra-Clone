@@ -1,33 +1,83 @@
-<div class="container mt-5">
-    <h2>All Products</h2>
-    <div class="row">
-        <div class="col-md-12 mx-auto mt-5">
-            <table class="table table-hover   ">
-                <thead>
-                  <tr class="table-primary">
-                    <th scope="col">Product Id</th>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Product Category</th>
-                    <!-- <th scope="col">Description</th> -->
-                    <th scope="col">Price</th>
-                    <th scope="col">Rating</th>
-                    <th scope="col">Remove</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let x of products">
-                    <th scope="row">{{x.id}}</th>
-                    
-                    <td>{{x.name}}</td>
-                    <td>{{x.cat}}</td>
-                    <!-- <td>{{x.desc}}</td> -->
-                    <td>{{x.price | currency:'INR'}}</td>
-                    <td>{{x.rating}}</td>
-                    <td><i (click)="remove(x)" class="bi bi-trash"></i></td>
-                  </tr>
-                 
-                </tbody>
-              </table>
-        </div>
-    </div>
+
+
+
+<div class="sidebar"  [ngClass]="{'active': isSidebarActive}">
+  <h2 (click)="toggleSidebar()">Sidebar</h2>
+  <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+  </ul>
 </div>
+
+
+<div class="content">
+
+  <h3>Dashboard</h3>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-2 customer ">
+        <h2 class="text-center mt-4">{{counter}} k</h2>
+      
+       <p class="text-center">Customers</p>
+      </div>
+      <div class="col-md-2 product">
+        <h2 class="text-center mt-4">{{products}} k</h2>
+        <p class="text-center">Products</p>
+      </div>
+      <div class="col-md-2 orders">
+        <h2 class="text-center mt-4">0 k</h2>
+        <p class="text-center">Orders</p>
+      </div>
+      <div class="col-md-2 income">
+        <h2 class="text-center mt-4">0 k</h2>
+        <p class="text-center">Income</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page content -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-2 customer ">
+      <h2 class="text-center mt-4">{{counter}} k</h2>
+    
+     <p class="text-center">Customers</p>
+    </div>
+    <div class="col-md-2 product">
+      <h2 class="text-center mt-4">{{products}} k</h2>
+      <p class="text-center">Products</p>
+    </div>
+    <div class="col-md-2 orders">
+      <h2 class="text-center mt-4">0 k</h2>
+      <p class="text-center">Orders</p>
+    </div>
+    <div class="col-md-2 income">
+      <h2 class="text-center mt-4">0 k</h2>
+      <p class="text-center">Income</p>
+    </div>
+  </div>
+</div> -->
+
