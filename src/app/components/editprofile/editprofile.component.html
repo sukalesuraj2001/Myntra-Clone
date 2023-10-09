@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <form class="example-form mt-5" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
+                <h2>Edit Your Profile</h2>
+                <mat-form-field class="example-full-width mt-5">
+                    <mat-label>Company</mat-label>
+                    <input matInput disabled value="Myntra">
+                </mat-form-field>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+
+                        <td><mat-form-field class="example-full-width">
+                                <mat-label>First name</mat-label>
+                                <input formControlName="firstName" matInput>
+                            </mat-form-field></td>
+                        <td><mat-form-field class="example-full-width">
+                                <mat-label> Last Name </mat-label>
+                                <input formControlName="lastName" matInput>
+                            </mat-form-field></td>
+
+                    </tr>
+                </table>
+                <p>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Mobile Number</mat-label>
+                            <input formControlName="mobileNumber" matInput>
+                        </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Email Id</mat-label>
+                            <input formControlName="email" matInput>
+                        </mat-form-field></td>
+
+                </p>
+
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address</mat-label>
+                        <textarea formControlName="address1" matInput placeholder="Ex. 100 Main St"></textarea>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address 2</mat-label>
+                        <textarea formControlName="address2" matInput></textarea>
+                    </mat-form-field>
+                </p>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td><mat-form-field class="example-full-width">
+                                <mat-label>City</mat-label>
+                                <input formControlName="city" matInput placeholder="Ex. San Francisco">
+                            </mat-form-field></td>
+                        <td><mat-form-field class="example-full-width">
+                                <mat-label>State</mat-label>
+                                <input formControlName="state" matInput placeholder="Ex. California">
+                            </mat-form-field></td><br>
+
+
+                    </tr>
+                    <tr>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Product Image</label>
+                            <input type="file" formControlName="image" class="form-control" id="productImage"
+                                accept="image/*" required="image">
+                        </div>
+                    </tr>
+
+
+
+                </table>
+
+                <p><button mat-raised-button color="primary">Submit</button></p>
+
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -23,17 +23,17 @@ cat:Cat[]=[]
 
 ngOnInit(): void {
  
-  this.ps1.getProducts().subscribe((data)=>{
-    console.log(data);
-    this.products=data
-    this.ps1.getShoes().subscribe((shoes)=>{
-    console.log(shoes);
-    this.shoes=shoes
+  // this.ps1.getProducts().subscribe((data)=>{
+  //   console.log(data);
+  //   this.products=data
+  //   this.ps1.getShoes().subscribe((shoes)=>{
+  //   console.log(shoes);
+  //   this.shoes=shoes
     
-    })
+  //   })
     
 
-  })
+  // })
 sessionStorage.removeItem("cat")
  
 }

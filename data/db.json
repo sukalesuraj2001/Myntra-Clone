@@ -373,6 +373,30 @@
       "width": 200,
       "code": "M-001",
       "rating": "4"
+    },
+    {
+      "productName": "jeans",
+      "description": "cool jeans",
+      "category": "2",
+      "price": 2500,
+      "totalprice": 2500,
+      "image": "C:\\fakepath\\user.png",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 33
+    },
+    {
+      "productName": "jeans",
+      "description": "cool jeans",
+      "category": "2",
+      "price": 2500,
+      "totalprice": 2500,
+      "image": "C:\\fakepath\\user.png",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 33
     }
   ],
   "Cart": [
@@ -442,6 +466,34 @@
       "code": "M-001",
       "rating": "4",
       "userId": "1"
+    },
+    {
+      "id": 27,
+      "name": "Rebook",
+      "desc": "free delivery",
+      "price": 1800,
+      "cat": "Rebook",
+      "url": "/assets/rebook/shoes2.jpeg",
+      "imgname": "Shoes",
+      "width": 200,
+      "code": "M-001",
+      "rating": "4",
+      "qty": 1,
+      "totalprice": 1800,
+      "userId": "1"
+    },
+    {
+      "id": 32,
+      "name": "Jack&Jones",
+      "desc": "free delivery",
+      "price": 1000,
+      "cat": "Jack",
+      "url": "/assets/jack/jack1.jpg",
+      "imgname": "Shoes",
+      "width": 200,
+      "code": "M-001",
+      "rating": "4",
+      "userId": "2"
     }
   ],
   "User": [
@@ -482,5 +534,33 @@
       "password": "abc123@",
       "id": 2
     }
-  ]
+  ],
+  "Profile": [
+    {
+      "firstName": "Suraj",
+      "lastName": "Sukale",
+      "email": "srsukale20@gmail.com",
+      "mobileNumber": "9112768829",
+      "address1": "Pune",
+      "address2": "Pune",
+      "image": "/assets/user2.png",
+      "city": "Pune City",
+      "state": "Maharashtra",
+      "id": 1
+    },
+    {
+      "firstName": "peter",
+      "lastName": "anderson",
+      "email": "peter@gmail.com",
+      "mobileNumber": "789654123",
+      "address1": "Pune",
+      "address2": "Pune",
+      "city": "Pune City",
+      "state": "Maharashtra",
+      "image": "C:\\fakepath\\user1.png",
+      "id": 2
+    }
+  ],
+  "Order":[]
+  
 }

@@ -66,6 +66,7 @@ export class SellerRegisterComponent {
           element.email===this.loginForm.value.email && element.password === this.loginForm.value.password
            ){
             count++;
+            sessionStorage.setItem('sellerId', element.id);
            }
         
       });
@@ -75,6 +76,7 @@ export class SellerRegisterComponent {
           'seller',
           this.loginForm.value.email + ' ' + this.loginForm.value.password
         );
+        
         this.router.navigate(['sellerhome']);
         setTimeout(() => {
           window.location.reload()

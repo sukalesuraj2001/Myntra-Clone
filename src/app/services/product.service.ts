@@ -41,9 +41,9 @@ getcount(){
 
 
 
-  getProducts():Observable<Product[]>{
-    // return this.http.get<Product[]>(`${this.apiUrl}/Product`);
-    return this.http.get<Product[]>(`${this.apiUrl}/Product`);
+  getProducts(){
+    const x=sessionStorage.getItem('sellerId')
+    return this.http.get(`${this.apiUrl}/Product?sellerId=${x}`);
   }
 
 

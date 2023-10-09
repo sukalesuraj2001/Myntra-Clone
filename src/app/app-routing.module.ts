@@ -9,6 +9,9 @@ import { HomeComponent } from './sellers/home/home.component';
 import { SellerRegisterComponent } from './sellers/seller-register/seller-register.component';
 import { EthenticWearComponent } from './products/ethentic-wear/ethentic-wear.component';
 import { AddProductComponent } from './sellers/add-product/add-product.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
@@ -39,6 +42,18 @@ const routes: Routes = [
     path: 'addProduct',
     component: AddProductComponent,
     title: 'Myntra | sellerhome',
+  },{
+    path: 'profile',
+    component: ProfileComponent,
+    title: 'Myntra | profile',
+  }, {
+    path: 'editprofile',
+    component: EditprofileComponent,
+    title: 'Myntra | Edit-Profile',
+  },{
+    path: 'about',
+    component: AboutComponent,
+    title: 'Myntra | About Us',
   }, 
 ];
 

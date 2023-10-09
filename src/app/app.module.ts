@@ -34,8 +34,12 @@ import { SellerRegisterComponent } from './sellers/seller-register/seller-regist
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EthenticWearComponent } from './products/ethentic-wear/ethentic-wear.component';
 import { AddProductComponent } from './sellers/add-product/add-product.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
+import { AboutComponent } from './components/about/about.component';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
+// import { CarouselModule } from '@coreui/angular';
 
 
 
@@ -64,6 +68,9 @@ import { AddProductComponent } from './sellers/add-product/add-product.component
     SellerRegisterComponent,
     EthenticWearComponent,
     AddProductComponent,
+    ProfileComponent,
+    EditprofileComponent,
+    AboutComponent,
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

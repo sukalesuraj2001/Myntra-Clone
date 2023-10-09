@@ -1,0 +1,12 @@
+form{
+    margin-left: 20rem;
+}
+button{
+    margin-left: 10rem;
+}
+
+@media (max-width: 768px) {
+    form{
+        margin-left: 0;
+    }
+}

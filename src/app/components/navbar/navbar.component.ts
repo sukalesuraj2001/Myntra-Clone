@@ -60,6 +60,7 @@ export class NavbarComponent {
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
       localStorage.removeItem('userName');
+      sessionStorage.removeItem("profileData")
       window.location.reload()
    
     }
@@ -69,6 +70,7 @@ export class NavbarComponent {
 
   sellerLogout() {
     localStorage.removeItem('seller');
+    sessionStorage.removeItem("sellerId")
     this.router.navigate(['/']);
     setTimeout(() => {
       window.location.reload();

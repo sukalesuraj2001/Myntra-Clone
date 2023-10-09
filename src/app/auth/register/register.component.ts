@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -18,6 +19,17 @@ export class RegisterComponent {
     private guard: AuthGuard,
     private router: Router
   ) {}
+
+ngOnInit(): void {
+
+  
+}
+
+
+
+
+
+
   //  for register user
   namectrl = new FormControl('');
 
@@ -72,7 +84,7 @@ export class RegisterComponent {
           ) {
             count++;
             localStorage.setItem('userId', element.id);
-            localStorage.setItem('userName', element.firstName);
+            localStorage.setItem('userName', element.firstName+" "+element.lastName);
 
             
           }
@@ -84,6 +96,15 @@ export class RegisterComponent {
           'token',
           this.loginForm.value.email + ' ' + this.loginForm.value.password
         );
+        // this.auth.getProfile().subscribe((res)=>{
+        //   const data=JSON.stringify(res)
+        //   console.log("data "+data);
+        //   sessionStorage.setItem("profileData", data);
+        //  })
+
+
+
+
         this.router.navigate(['/']);
         setTimeout(() => {
           window.location.reload()

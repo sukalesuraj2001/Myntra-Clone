@@ -23,5 +23,20 @@ userLogin(userData:any){
   
 }
 
+// userProfile start
+
+addProfile(data:any){
+
+  return this.http.post(`${this.apiUrl}/Profile`,data);
+
+}
+
+getProfile(userdata:any){
+
+const x=localStorage.getItem('userId')
+    return this.http.get(`${this.apiUrl}/Profile?id=${x}`);
+
+}
+
 
 }

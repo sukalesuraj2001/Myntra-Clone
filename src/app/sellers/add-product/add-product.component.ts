@@ -11,6 +11,12 @@ export class AddProductComponent {
   namectrl = new FormControl('');
 
   constructor(private fb: FormBuilder,private seller:SellerService) {}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+  
+    
+  }
 
   profileForm = new FormGroup({
     productName: new FormControl('', Validators.required),
@@ -24,8 +30,9 @@ export class AddProductComponent {
   });
 
   onSubmit(data:any) {
-   this.seller.addProduct(data)
-   console.log( "Product addes successfully!");
+    data.sellerId=sessionStorage.getItem("sellerId")
+   this.seller.addProduct(data).subscribe()
+   alert( "Product added successfully!");
    
   }
   
