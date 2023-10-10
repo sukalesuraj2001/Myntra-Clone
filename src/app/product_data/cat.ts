@@ -1,10 +1,10 @@
 export class Cat{
     id: number=0
-    name:string=""
+    productName:string=""
     desc: string=""
     price: number=0
     cat: string=""
-    url: string=""
+    image: string=""
     imgname:string=""
     code: string=""
     rating: number=0

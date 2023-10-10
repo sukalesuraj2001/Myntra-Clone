@@ -8,12 +8,12 @@
       <ng-container *ngFor="let item of cartItems">
         <div class="cart-item-details-container">
           <div class="cart-item mt-4">
-            <img [src]="item.url" alt="{{ item.name }}" class="cart-item-image mt-3">
+            <img [src]="item.image" alt="{{ item.image }}" class="cart-item-image mt-3">
           </div>
           <div class="cart-item-details">
-            <h4>{{ item.name }}</h4>
-            <p>{{ item.cat }}</p>
-            <p>{{ item.desc }}</p>
+            <h4>{{ item.productName }}</h4>
+            <p>{{ item.category }}</p>
+            <p>{{ item.description }}</p>
             <p> QTY:{{item.qty}}</p>
            
 

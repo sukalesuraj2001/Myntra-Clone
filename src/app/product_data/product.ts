@@ -1,11 +1,11 @@
 export class Product{
   
     id: number=0
-    name:string=""
-    desc: string=""
+    productName:string=""
+    description: string=""
     price: number=0
-    cat: string=""
-    url: string=""
+    category: string=""
+    image: string=""
     imgname:string=""
     code: string=""
     rating: number=0

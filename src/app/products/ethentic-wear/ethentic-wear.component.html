@@ -6,9 +6,9 @@
 
             <mat-card class="example-card">
 
-                <img class="pimage" mat-card-image src="{{x.url}}" alt="Photo of a Shiba Inu">
+                <img class="pimage" mat-card-image src="{{x.image}}" alt="Product Image">
                 <mat-card-content>
-                    <p>{{x.name}} </p>
+                    <p>{{x.productName}} </p>
                     <p>{{x.price | currency:"INR"}} </p>
 
                     <app-rating [rate]="x.rating"></app-rating>

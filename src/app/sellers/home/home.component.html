@@ -12,6 +12,14 @@
 </div>
 
 
+
+
+
+
+
+
+
+
 <div class="content">
 
   <h3>Dashboard</h3>
@@ -35,16 +43,49 @@
         <p class="text-center">Income</p>
       </div>
     </div>
+    
+<div class="container mt-5">
+  <h2>All Products</h2>
+  <div class="row mt-5">
+    <div class="col-md-10">
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary text-center">
+            <th scope="col"> Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Remove </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of item">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{ item.productName }}</td>
+            <td>{{ item.price | currency:"INR" }}</td>
+            <td>{{ item.category }}</td>
+            <td (click)="removeProduct(item.id)" class="bi bi-trash"></td>
+          </tr>
+          
+         
+        </tbody>
+      </table>
+      
+    </div>
   </div>
+</div>
+  </div>
+  
 </div>
 
 
 <!-- Page content -->
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
+
+<!-- All Products -->
 
 
 

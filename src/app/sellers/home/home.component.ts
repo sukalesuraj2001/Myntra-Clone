@@ -17,25 +17,26 @@ isSidebarActive = true;
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
   constructor(private sellerService:SellerService,private auth:AuthService,private ps1:ProductService){}
 
-products:number=0
+products:number=0;
+item:Product[]=[];
 
 ngOnInit(data:any): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
   this.auth.userLogin(data).subscribe((res)=>{
-  console.log("count is call");
+  // console.log("count is call");
   const data=JSON.stringify(res)
-  console.log("count is call"+data);
+  // console.log("count is call"+data);
 
 
 
 
   const entries = Object.entries(res);
   this.counter=entries.length
-    console.log("Counter is " + this.counter);
+    // console.log("Counter is " + this.counter);
 
     for (const [key, value] of entries) {
-      console.log(`Key: ${key}, Value: ${value}`);
+      // console.log(`Key: ${key}, Value: ${value}`);
       // You can process each key-value pair here
 
     }
@@ -45,13 +46,14 @@ ngOnInit(data:any): void {
 
 
   // for products
-  this.ps1.getProducts().subscribe((res)=>{
+  this.ps1.getProducts().subscribe((res:any)=>{
+    this.item=res
     const entries = Object.entries(res);
   this.products=entries.length
-    console.log("Counter is " + this.counter);
+    // console.log("Counter is " + this.counter);
 
     for (const [key, value] of entries) {
-      console.log(`Key: ${key}, Value: ${value}`);
+      // console.log(`Key: ${key}, Value: ${value}`);
       // You can process each key-value pair here
 
     }
@@ -85,7 +87,15 @@ toggleSidebar() {
 
 
 
+// remove product 
 
+removeProduct(itemId: number) {
+  this.sellerService.removeProduct(itemId).subscribe(() => {
+    alert("Product deleted successfully");
+    window.location.reload()
+    // Add any additional logic you need after the product is deleted.
+  });
+}
 
 
 

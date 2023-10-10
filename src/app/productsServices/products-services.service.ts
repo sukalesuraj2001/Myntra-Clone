@@ -16,7 +16,7 @@ export class ProductsServicesService {
   // }
   getCategory(){
     const x=sessionStorage.getItem('cat')
-    return this.http.get(`${this.apiUrl}/Product?cat=${x}`);
+    return this.http.get(`${this.apiUrl}/Product?category=${x}`);
   
   }
 }
