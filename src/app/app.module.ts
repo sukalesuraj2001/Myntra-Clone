@@ -37,6 +37,8 @@ import { AddProductComponent } from './sellers/add-product/add-product.component
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { AboutComponent } from './components/about/about.component';
+import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
+import { OrderComponent } from './components/order/order.component';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
 // import { CarouselModule } from '@coreui/angular';
@@ -71,6 +73,8 @@ import { AboutComponent } from './components/about/about.component';
     ProfileComponent,
     EditprofileComponent,
     AboutComponent,
+    AllCustomersComponent,
+    OrderComponent,
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

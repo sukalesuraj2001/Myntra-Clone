@@ -12,6 +12,8 @@ import { AddProductComponent } from './sellers/add-product/add-product.component
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { AboutComponent } from './components/about/about.component';
+import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
+import { OrderComponent } from './components/order/order.component';
 
 
 const routes: Routes = [
@@ -54,6 +56,14 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     title: 'Myntra | About Us',
+  }, {
+    path: 'customer',
+    component: AllCustomersComponent,
+    title: 'Myntra | customer',
+  },{
+    path: 'order',
+    component: OrderComponent,
+    title: 'Myntra | order',
   }, 
 ];
 

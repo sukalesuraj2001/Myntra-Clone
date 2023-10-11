@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" >
+            <div class="product-card mb-5" *ngFor="let x of products">
+              
+                <img [src]="x.image" class="product-image">
+             
+              
+             
+            </div>
+        </div>
+        <div class="col-md-4" *ngFor="let x of profile">
+            <div class="customer-details">
+                <h2>Customer Details</h2>
+                <h5> Name</h5>
+                <p>{{x.firstName+" " +x.lastName }}</p>
+                <h5> Email</h5>
+                <p>{{x.email}}</p>
+                <h5>Mobile</h5>
+                <p>+91{{x.mobileNumber}}</p>
+                <h5>Address </h5>
+                <p>{{x.address1}}</p>
+               
+                <h5>City</h5>
+                <p>{{x.city}}</p>
+                <h5>State</h5>
+                <p>{{x.state}}</p>
+
+
+
+
+               
+            </div>
+
+            <div class="order-summary">
+                <h4>Order Summary</h4>
+                <p>Product Name: $XX.XX</p>
+                <p>Shipping: $X.XX</p>
+                <p>Total: $XX.XX</p>
+                <button class="btn btn-primary btn-block">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>

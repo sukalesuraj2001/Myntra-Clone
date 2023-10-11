@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h2>All Customers</h2>
+    <div class="row mt-5">
+      <div class="col-md-10">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-primary text-center">
+              <th scope="col"> Id</th>
+              <th scope="col">Customer First Name</th>
+              <th scope="col">Customer Last Name</th>
+              <th scope="col">Email</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center" *ngFor="let x of customers">
+              <!-- <th scope="row">{{ x.id }}</th> -->
+              <td>{{ x.id }}</td>
+              <td>{{ x.firstName }}</td>
+              <td>{{ x.lastName }}</td>
+              <td>{{ x.email }}</td>
+             
+            </tr>
+            
+           
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>

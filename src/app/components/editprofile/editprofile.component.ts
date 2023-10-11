@@ -35,7 +35,7 @@ constructor(private auth:AuthService,private router:Router){}
     
     
     sessionStorage.setItem("profileData", JSON.stringify(this.profileForm.value));
-    
+    data.userId=localStorage.getItem("userId")
     this.auth.addProfile(data).subscribe((res)=>{
       
       alert("Profile Edited Successfull!")

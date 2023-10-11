@@ -1,0 +1,19 @@
+.product-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+.customer-details, .order-summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+.order-summary h4 {
+    margin-top: 0;
+}
+img{
+    width: 25rem;
+}

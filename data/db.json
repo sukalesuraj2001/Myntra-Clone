@@ -38,6 +38,32 @@
       "sellerId": "1",
       "id": 37,
       "userId": "2"
+    },
+    {
+      "productName": "Seryeon Women's Viscose Tie-up Neck Half Sleeve A-line Dress Dress for Women",
+      "description": "One Piece Dress for Women|Dress for Women Stylish|Western Dress|Dress for Women|Printed Dress Ivory SSD104R13",
+      "category": "Western Wear",
+      "price": 1299,
+      "totalprice": 1299,
+      "image": "/assets/western wear/western2.jpg",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 35,
+      "userId": "1"
+    },
+    {
+      "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+      "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+      "category": "Sport Wear",
+      "price": 279,
+      "totalprice": 279,
+      "image": "/assets/sport wear/sport2.jpg",
+      "qty": 1,
+      "rating": 3,
+      "sellerId": "1",
+      "id": 36,
+      "userId": "1"
     }
   ],
   "User": [
@@ -61,6 +87,13 @@
       "email": "mahesh@gmail.com",
       "password": "123456",
       "id": 3
+    },
+    {
+      "firstName": "Jhon",
+      "lastName": "Sinha",
+      "email": "jhon@gmail.com",
+      "password": "Jhon@2001",
+      "id": 4
     }
   ],
   "Seller": [
@@ -90,6 +123,7 @@
       "image": "/assets/user2.png",
       "city": "Pune City",
       "state": "Maharashtra",
+      "userId": 1,
       "id": 1
     },
     {
@@ -102,7 +136,23 @@
       "city": "Pune City",
       "state": "Maharashtra",
       "image": "C:\\fakepath\\user1.png",
+      "userId": 2,
       "id": 2
+    }
+  ],
+  "Buy": [
+    {
+      "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+      "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+      "category": "Sport Wear",
+      "price": 279,
+      "totalprice": 279,
+      "image": "/assets/sport wear/sport2.jpg",
+      "qty": 10,
+      "rating": 3,
+      "sellerId": "1",
+      "id": 36,
+      "userId": "1"
     }
   ],
   "Order": []

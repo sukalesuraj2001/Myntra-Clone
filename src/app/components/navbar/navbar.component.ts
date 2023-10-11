@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
@@ -11,6 +12,13 @@ import { SellerService } from 'src/app/services/seller.service';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
+  animations: [
+    trigger('slideIn', [
+      state('void', style({ opacity: 0, transform: 'translateY(-200%)' })),
+      transition(':enter, :leave', [animate('400ms ease')])
+    ])
+  ]
+
 })
 export class NavbarComponent {
   // const seller=localStorage.getItem("seller")
@@ -19,6 +27,10 @@ export class NavbarComponent {
   cartcount = 0;
   count = new Subject<number>();
   sub = new Subscription();
+
+
+  logoutSucess = false;
+  logoutAttempt = false;
 
   constructor(
     private ps2: ProductService,
@@ -54,16 +66,22 @@ export class NavbarComponent {
 
   logout() {
     if (localStorage.length === 0) {
-      alert('You are already Logout');
+      this.logoutSucess=false
+      setTimeout(() => {
+        window.location.reload()
+      }, 2000);
     } else {
-      alert('Logout Successfully!');
+      this.logoutSucess=true
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
       localStorage.removeItem('userName');
       sessionStorage.removeItem("profileData")
-      window.location.reload()
+      setTimeout(() => {
+        window.location.reload()
+      }, 2000);
    
     }
+    this.logoutAttempt=true
   }
 
   seller = localStorage.getItem('seller');

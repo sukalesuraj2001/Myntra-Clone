@@ -3,4 +3,5 @@ export class Register{
     lastName:string=""
     email:string=""
     password:string=""
+    id:number=0
 }

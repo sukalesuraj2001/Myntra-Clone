@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/product_data/product';
 import { CartService } from 'src/app/services/cart.service';
+import { PlaceOrderService } from 'src/app/services/place-order.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class CartComponent {
 // item.qty:number=1
 
   cartItems: Product[] = [];
-  constructor(private cartService: CartService,private ps1:ProductService,private router:Router) {}
+  totalPrice:any;
+  constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService) {}
 
 ngOnInit(cartdata:any): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -63,5 +65,27 @@ remove(item: Product) {
     }
   );
 }
+
+
+
+
+
+// place order functionality
+
+placeOrder(item: any) {
+  // Calculate the total price for the current item
+  item.totalprice = item.price * item.qty;
+  
+  const data = JSON.stringify(item);
+  console.log("the product is " + data);
+  item.userId = localStorage.getItem("userId");
+
+  // Now, send the item, including the calculated totalprice, to your service
+  this.orderservice.addProduct(item).subscribe((res) => {
+    console.log("Product added successfully");
+    // You may want to reset the item's quantity or remove it from the cart here.
+  });
+}
+
 
 }
