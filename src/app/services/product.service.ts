@@ -34,6 +34,9 @@ getcount(){
 }
 
 
+getCat(){
+  return this.http.get(`${this.apiUrl}/Cat`);
+}
 
 
 

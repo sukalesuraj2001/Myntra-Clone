@@ -23,4 +23,13 @@ export class PlaceOrderService {
     const x=localStorage.getItem("userId")
     return this.http.get(`${this.apiUrl}/Profile?userId=${x}`);
   }
+
+  removeProduct(itemId: number) {
+    return this.http.delete(`${this.apiUrl}/Buy/${itemId}`);
+  }
+  orderProduct(data:any){
+    return this.http.post(`${this.apiUrl}/Order`, data);
+  }
+
+
 }

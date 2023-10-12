@@ -1,9 +1,9 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
-    <a href="https://play.google.com/store/search?q=myntra&c=apps&hl=en&gl=US">  <img src="/assets/banner1.png" class="img-fluid" alt="..."></a>
-      <img src="/assets/banner2.png" class="img-fluid mt-1" alt="...">
+    <div class="col-md-12" *ngFor="let x of images">
+    <a href="https://play.google.com/store/search?q=myntra&c=apps&hl=en&gl=US">  <img src="{{x.image}}" class="img-fluid" alt="..."></a>
+      <img src="{{x.image1}}" class="img-fluid mt-1" alt="...">
     </div>
   </div>
 </div>

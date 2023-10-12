@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="container-fluid mt-5">
  
     <div class="row mt-3">
@@ -23,4 +23,75 @@
 
         </div>
     </div>
-</div>
+</div> -->
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 ">
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <h3 class="mt-5">FILTERS</h3>
+        <div id="filters" class="col-md-2 mt-2">
+            <!-- <div class="form-check mt-3">
+                <input class="form-check-input ms-3   " type="radio" name="flexRadioDefault" id="men">
+                <label class="form-check-label fw-bold mx-2" for="men">
+                    Mens
+                </label><br>
+                <input class="form-check-input ms-3" type="radio" name="flexRadioDefault" id="women">
+                <label class="form-check-label fw-bold mx-2" for="women">
+                    Women
+                </label><br>
+                <input class="form-check-input ms-3" type="radio" name="flexRadioDefault" id="boys">
+                <label class="form-check-label fw-bold mx-2" for="boys">
+                    Boys
+                </label><br>
+                <input class="form-check-input ms-3" type="radio" name="flexRadioDefault" id="girls">
+                <label class="form-check-label fw-bold mx-2" for="girls">
+                    Girls
+                </label>
+            </div>
+            <hr>
+            <h3>PRICE</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                    Indeterminate checkbox
+                </label>
+            </div> -->
+    </div>
+        <div class="col-md-9 mt-3">
+
+            <div class="row">
+                <div class="col-md-3 mt-3" *ngFor="let x of ethentic">
+                    <div class="card-fluid">
+                        <img src="{{x.image}}" class="card-img-top ">
+                        <div class="card-body">
+                            <h5 class="card-title">{{x.productName}}</h5>
+                            <p>{{x.description}}</p>
+                            <p class="fw-bold">{{x.price | currency:"INR"}}</p>
+
+                            <app-rating [rate]="x.rating"></app-rating>
+                            <!-- <a href="#" (click)="greet(x);" class="btn btn-danger" (click)="addToCart()">Add to cart</a> -->
+
+
+
+                            <button class="btn btn-danger " (click)="addToCart(x)">See Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,7 +1,7 @@
 export class Cat{
     id: number=0
     productName:string=""
-    desc: string=""
+    description: string=""
     price: number=0
     cat: string=""
     image: string=""

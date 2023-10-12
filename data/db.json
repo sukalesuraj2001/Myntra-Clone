@@ -1,7 +1,7 @@
 {
   "Product": [
     {
-      "productName": "Seryeon Women's Viscose Tie-up Neck Half Sleeve A-line Dress Dress for Women",
+      "productName": " Dress for Women",
       "description": "One Piece Dress for Women|Dress for Women Stylish|Western Dress|Dress for Women|Printed Dress Ivory SSD104R13",
       "category": "Western Wear",
       "price": 1299,
@@ -13,7 +13,7 @@
       "id": 35
     },
     {
-      "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+      "productName": "  Sports T-Shirt",
       "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
       "category": "Sport Wear",
       "price": 279,
@@ -23,11 +23,71 @@
       "rating": 3,
       "sellerId": "1",
       "id": 36
+    },
+    {
+      "productName": "Ethentic wear",
+      "description": "Ethentic wear",
+      "category": "Ethentic Wear",
+      "price": 1522,
+      "totalprice": 1522,
+      "image": "/assets/ethenticWear/ethentic1.jpg",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 37
+    },
+    {
+      "productName": "Ethentic wear Dress",
+      "description": "Ethentic wear Dress",
+      "category": "Ethentic Wear",
+      "price": 2000,
+      "totalprice": 2000,
+      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 38
+    },
+    {
+      "productName": "Ethentic wear Dress",
+      "description": "Ethentic wear Dress",
+      "category": "Ethentic Wear",
+      "price": 2000,
+      "totalprice": 2000,
+      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 38
+    },
+    {
+      "productName": "Ethentic wear Dress",
+      "description": "Ethentic wear Dress",
+      "category": "Ethentic Wear",
+      "price": 2000,
+      "totalprice": 2000,
+      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 38
+    },
+    {
+      "productName": "Ethentic wear Dress",
+      "description": "Ethentic wear Dress",
+      "category": "Ethentic Wear",
+      "price": 2000,
+      "totalprice": 2000,
+      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 38
     }
   ],
   "Cart": [
     {
-      "productName": "CUPID Women Plus Size Cotton Round Neck Full Sleeves T-Shirt, Nightwear, Sleepwear,",
+      "productName": " Nightwear, Sleepwear,",
       "description": "CUPID Women Plus Size Cotton Round Neck Full Sleeves T-Shirt, Nightwear, Sleepwear, Daily Use Gym n Lounge Wear Long Tops with Pocket for Ladies",
       "category": "Long Wear",
       "price": 646,
@@ -38,32 +98,6 @@
       "sellerId": "1",
       "id": 37,
       "userId": "2"
-    },
-    {
-      "productName": "Seryeon Women's Viscose Tie-up Neck Half Sleeve A-line Dress Dress for Women",
-      "description": "One Piece Dress for Women|Dress for Women Stylish|Western Dress|Dress for Women|Printed Dress Ivory SSD104R13",
-      "category": "Western Wear",
-      "price": 1299,
-      "totalprice": 1299,
-      "image": "/assets/western wear/western2.jpg",
-      "qty": 1,
-      "rating": 4.5,
-      "sellerId": "1",
-      "id": 35,
-      "userId": "1"
-    },
-    {
-      "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-      "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-      "category": "Sport Wear",
-      "price": 279,
-      "totalprice": 279,
-      "image": "/assets/sport wear/sport2.jpg",
-      "qty": 1,
-      "rating": 3,
-      "sellerId": "1",
-      "id": 36,
-      "userId": "1"
     }
   ],
   "User": [
@@ -71,29 +105,8 @@
       "firstName": "Suraj",
       "lastName": "Sukale",
       "email": "srsukale20@gmail.com",
-      "password": "abc123@",
+      "password": "Suraj@2001",
       "id": 1
-    },
-    {
-      "firstName": "peter",
-      "lastName": "anderson",
-      "email": "peter@gmail.com",
-      "password": "xyz123@",
-      "id": 2
-    },
-    {
-      "firstName": "mahesh",
-      "lastName": "mahesh",
-      "email": "mahesh@gmail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "firstName": "Jhon",
-      "lastName": "Sinha",
-      "email": "jhon@gmail.com",
-      "password": "Jhon@2001",
-      "id": 4
     }
   ],
   "Seller": [
@@ -117,27 +130,14 @@
       "firstName": "Suraj",
       "lastName": "Sukale",
       "email": "srsukale20@gmail.com",
-      "mobileNumber": "9112768829",
-      "address1": "Pune",
+      "mobileNumber": "09112768829",
+      "address1": " Kharadi Pune411011",
       "address2": "Pune",
-      "image": "/assets/user2.png",
       "city": "Pune City",
       "state": "Maharashtra",
-      "userId": 1,
+      "image": "",
+      "userId": "1",
       "id": 1
-    },
-    {
-      "firstName": "peter",
-      "lastName": "anderson",
-      "email": "peter@gmail.com",
-      "mobileNumber": "789654123",
-      "address1": "Pune",
-      "address2": "Pune",
-      "city": "Pune City",
-      "state": "Maharashtra",
-      "image": "C:\\fakepath\\user1.png",
-      "userId": 2,
-      "id": 2
     }
   ],
   "Buy": [
@@ -146,14 +146,144 @@
       "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
       "category": "Sport Wear",
       "price": 279,
-      "totalprice": 279,
+      "totalprice": 837,
       "image": "/assets/sport wear/sport2.jpg",
-      "qty": 10,
+      "qty": 3,
       "rating": 3,
       "sellerId": "1",
       "id": 36,
       "userId": "1"
     }
   ],
-  "Order": []
+  "Order": [
+    [
+      {
+        "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+        "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+        "category": "Sport Wear",
+        "price": 279,
+        "totalprice": 837,
+        "image": "/assets/sport wear/sport2.jpg",
+        "qty": 3,
+        "rating": 3,
+        "sellerId": "1",
+        "id": 36,
+        "userId": "1",
+        "orderid": "6584",
+        "profile": [
+          {
+            "firstName": "Suraj",
+            "lastName": "Sukale",
+            "email": "srsukale20@gmail.com",
+            "mobileNumber": "09112768829",
+            "address1": " Kharadi Pune411011",
+            "address2": "Pune",
+            "city": "Pune City",
+            "state": "Maharashtra",
+            "image": "",
+            "userId": "1",
+            "id": 1
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+        "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
+        "category": "Sport Wear",
+        "price": 279,
+        "totalprice": 837,
+        "image": "/assets/sport wear/sport2.jpg",
+        "qty": 3,
+        "rating": 3,
+        "sellerId": "2",
+        "id": 36,
+        "userId": "1",
+        "orderid": "6584",
+        "profile": [
+          {
+            "firstName": "Suraj",
+            "lastName": "Sukale",
+            "email": "srsukale20@gmail.com",
+            "mobileNumber": "09112768829",
+            "address1": " Kharadi Pune411011",
+            "address2": "Pune",
+            "city": "Pune City",
+            "state": "Maharashtra",
+            "image": "",
+            "userId": "1",
+            "id": 1
+          }
+        ]
+      }
+    ]
+  ],
+  "Banner": [
+    {
+      "image": "/assets/banner/banner1.png",
+      "image1": "/assets/banner/banner2.png"
+    }
+  ],
+  "Cat": [
+    {
+      "cat1": "/assets/Category/cat1.png"
+    },
+    {
+      "cat2": "/assets/Category/cat2.png"
+    },
+    {
+      "cat3": "/assets/Category/cat3.png"
+    },
+    {
+      "cat4": "/assets/Category/cat4.png"
+    },
+    {
+      "cat5": "/assets/Category/cat5.png"
+    },
+    {
+      "cat6": "/assets/Category/cat6.png"
+    },
+    {
+      "cat7": "/assets/Category/cat7.png"
+    },
+    {
+      "cat8": "/assets/Category/cat8.png"
+    }
+  ],
+  "Slider1": [
+    {
+      "slide1": "/assets/slider1/sl1.png"
+    },
+    {
+      "slide2": "/assets/slider1/sl2.png"
+    },
+    {
+      "slide3": "/assets/slider1/sl3.png"
+    },
+    {
+      "slide4": "/assets/slider1/sl4.png"
+    },
+    {
+      "slide5": "/assets/slider1/sl5.png"
+    },
+    {
+      "slide6": "/assets/slider1/sl6.png"
+    },
+    {
+      "slide7": "/assets/slider1/sl7.png"
+    },
+    {
+      "slide8": "/assets/slider1/sl8.png"
+    },
+    {
+      "slide9": "/assets/slider1/sl9.png"
+    },
+    {
+      "slide10": "/assets/slider1/sl10.png"
+    },
+    {
+      "slide11": "/assets/slider1/sl11.png"
+    }
+  ]
 }

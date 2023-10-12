@@ -82,7 +82,7 @@ placeOrder(item: any) {
 
   // Now, send the item, including the calculated totalprice, to your service
   this.orderservice.addProduct(item).subscribe((res) => {
-    console.log("Product added successfully");
+    alert("Product added successfully");
     // You may want to reset the item's quantity or remove it from the cart here.
   });
 }

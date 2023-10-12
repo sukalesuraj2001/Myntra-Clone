@@ -8,7 +8,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="2000">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="row">
+          <div class="row" >
             <div class="col-2">
               <img src="/assets/slider1/sl1.png" (click)="setCategory('Rebook')" routerLink="ethenticWear"
                 class="d-block w-100" alt="Rebook">
@@ -59,7 +59,7 @@
 </div>
 
 
-<div class="container-fluid mt-5">
+ <div class="container-fluid mt-5">
   <div class="row">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
       <div class="carousel-inner">
@@ -110,7 +110,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-<div class="container-fluid mt-5">
+<!-- <div class="container-fluid mt-5">
   <h3>SHOP BY CATEGORY</h3>
   <div class="row mt-3 ">
     <div class="col-md-2 mb-4 my-2">
@@ -303,4 +303,41 @@
     </div>
   </div>
 
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid mt-5">
+  <h3 class="text-center text-warning">{{category}}</h3>
+  <div class="row mt-2">
+    <div class="col-md-2" *ngFor="let x of products">
+      <img src="{{x.cat1}}"   (click)="setCategory('Ethentic Wear') " routerLink="ethenticWear" class="img-fluid">
+      <img src="{{x.cat2}}" class="img-fluid">
+      <img src="{{x.cat3}}" class="img-fluid">
+      <img src="{{x.cat4}}" class="img-fluid">
+      <img src="{{x.cat5}}" class="img-fluid">
+      <img src="{{x.cat6}}" class="img-fluid">
+      <img src="{{x.cat7}}" class="img-fluid">
+      <img src="{{x.cat8}}" class="img-fluid">
+    </div>
+  </div>
 </div>

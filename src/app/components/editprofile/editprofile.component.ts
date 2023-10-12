@@ -31,11 +31,13 @@ constructor(private auth:AuthService,private router:Router){}
   });
 
   formsubmit(data: any): void {
-    console.log(this.profileForm.value);
+    console.log(this.profileForm.value.address1);
     
-    
+    sessionStorage.setItem("address",JSON.stringify(this.profileForm.value.address1))
     sessionStorage.setItem("profileData", JSON.stringify(this.profileForm.value));
     data.userId=localStorage.getItem("userId")
+
+
     this.auth.addProfile(data).subscribe((res)=>{
       
       alert("Profile Edited Successfull!")

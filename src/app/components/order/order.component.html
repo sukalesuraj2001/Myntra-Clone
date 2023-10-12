@@ -1,44 +1,47 @@
-<div class="container">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-md-8" >
-            <div class="product-card mb-5" *ngFor="let x of products">
-              
-                <img [src]="x.image" class="product-image">
-             
-              
-             
-            </div>
+      <div class="col-md-9">
+        <div *ngFor="let customer of profile" class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <h3>Customer Information</h3>
+          <p>Name: {{customer.firstName + " " + customer.lastName}}</p>
+          <p>Email: {{customer.email}}</p>
+          <p>Address: {{customer.address1}}</p>
         </div>
-        <div class="col-md-4" *ngFor="let x of profile">
-            <div class="customer-details">
-                <h2>Customer Details</h2>
-                <h5> Name</h5>
-                <p>{{x.firstName+" " +x.lastName }}</p>
-                <h5> Email</h5>
-                <p>{{x.email}}</p>
-                <h5>Mobile</h5>
-                <p>+91{{x.mobileNumber}}</p>
-                <h5>Address </h5>
-                <p>{{x.address1}}</p>
-               
-                <h5>City</h5>
-                <p>{{x.city}}</p>
-                <h5>State</h5>
-                <p>{{x.state}}</p>
-
-
-
-
-               
+  
+        <div *ngFor="let product of products" class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <div class="row">
+            <div class="col-md-4">
+              <img [src]="product.image" alt="...">
             </div>
-
-            <div class="order-summary">
-                <h4>Order Summary</h4>
-                <p>Product Name: $XX.XX</p>
-                <p>Shipping: $X.XX</p>
-                <p>Total: $XX.XX</p>
-                <button class="btn btn-primary btn-block">Place Order</button>
+            <div class="col-md-8" *ngFor="let x of products">
+                <p><strong>Product Name:</strong></p>
+                <p>{{x.id}}</p>
+                <p>{{x.productName}}</p>
+                <p> Quantity:{{x.qty}}</p>
+                <p>Category:{{x.category}}</p>
+    
+                <p><strong> Price:{{x.totalprice | currency:"INR"}}:</strong></p>
+                <!-- Add product details here -->
+    
+                <a class="text-decoration-none text-dark">
+                  <button type="submit" class="btn btn-danger mt-4" (click)="removeProduct(x.id)"  >Remove</button>
+                </a>
+              
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <h3>Price Details</h3>
+          <br>
+          <h5>Items:</h5>
+          <!-- Add item details here -->
+          <a href="#">
+            <button class="btn btn-warning mt-2" (click)="makePayment(products)">Make Payment</button>
+          </a>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  

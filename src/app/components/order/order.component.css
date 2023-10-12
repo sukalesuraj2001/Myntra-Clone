@@ -1,4 +1,4 @@
-.product-details {
+/* .product-details {
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
@@ -16,4 +16,26 @@
 }
 img{
     width: 25rem;
-}
+} */
+
+
+img{
+    width: 20rem;
+    height: 20rem;
+} 
+
+
+.product-card {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info {
+    margin-left: 20px;
+  }
+  

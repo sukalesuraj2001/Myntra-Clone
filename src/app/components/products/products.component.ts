@@ -4,6 +4,7 @@ import { Cat } from 'src/app/product_data/cat';
 import { Product } from 'src/app/product_data/product';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
+import { SlidersService } from 'src/app/services/sliders.service';
 
 @Component({
   selector: 'app-products',
@@ -12,29 +13,29 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductsComponent {
 // cdata1= new ProductService();
-constructor(private ps1:ProductService,private cartService:CartService,private router:Router){
+constructor(private ps1:ProductService,private cartService:CartService,private router:Router,private slider:SlidersService){
   // this.cdata1=ps1
 }
 
 products:Product[]=[]
-shoes:Product[]=[]
+slide:Product[]=[]
 cat:Cat[]=[]
 
-
+category="CATEGORY SPECIALS"
 ngOnInit(): void {
- 
-  // this.ps1.getProducts().subscribe((data)=>{
-  //   console.log(data);
-  //   this.products=data
-  //   this.ps1.getShoes().subscribe((shoes)=>{
-  //   console.log(shoes);
-  //   this.shoes=shoes
-    
-  //   })
-    
+ this.slider.getSlider1().subscribe((res:any)=>{
+this.slide=res
+console.log("the silders are"+JSON.stringify(res));
 
-  // })
+ })
+
 sessionStorage.removeItem("cat")
+
+
+this.ps1.getCat().subscribe((res:any)=>{
+console.log("category called"+JSON.stringify(res));
+this.products=res
+})
  
 }
 

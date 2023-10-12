@@ -14,6 +14,7 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
 import { AboutComponent } from './components/about/about.component';
 import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
 import { OrderComponent } from './components/order/order.component';
+import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
 
 
 const routes: Routes = [
@@ -64,6 +65,10 @@ const routes: Routes = [
     path: 'order',
     component: OrderComponent,
     title: 'Myntra | order',
+  }, {
+    path: 'sellerOrder',
+    component: SellerOrderComponent,
+    title: 'Myntra | sellerOrder',
   }, 
 ];
 

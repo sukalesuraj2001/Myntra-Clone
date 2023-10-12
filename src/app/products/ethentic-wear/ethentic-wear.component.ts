@@ -42,6 +42,7 @@ addToCart(data: any) {
   const token = localStorage.getItem('token');
   if (!token) {
     alert("You need to log in to add products to the cart.");
+    this.router.navigate(['cart'])
     return;
   }
 

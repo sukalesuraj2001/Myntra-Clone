@@ -35,7 +35,9 @@ addProduct(data:any){
   return this.http.post(`${this.apiUrl}/Product`,data);
 }
 
-
+getOrders(data: any) {
+  return this.http.get(`${this.apiUrl}/Order?sellerId=${8}`, data);
+}
 
 
 

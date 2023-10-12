@@ -76,6 +76,7 @@ export class NavbarComponent {
       localStorage.removeItem('userId');
       localStorage.removeItem('userName');
       sessionStorage.removeItem("profileData")
+      // sessionStorage.removeItem("address")
       setTimeout(() => {
         window.location.reload()
       }, 2000);
