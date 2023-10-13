@@ -40,6 +40,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
 import { OrderComponent } from './components/order/order.component';
 import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
 // import { CarouselModule } from '@coreui/angular';
@@ -77,6 +78,7 @@ import { SellerOrderComponent } from './sellers/seller-order/seller-order.compon
     AllCustomersComponent,
     OrderComponent,
     SellerOrderComponent,
+    WishlistComponent,
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

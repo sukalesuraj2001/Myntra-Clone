@@ -1,0 +1,108 @@
+img {
+ 
+    transition: transform 0.2s;
+  }
+  
+  img:hover {
+    transform: scale(1.1); 
+    cursor: zoom-in;
+  }
+.card-img-top{
+  height: 40vh;
+  width: 17rem;
+}
+
+
+
+  .size-chart {
+    display: flex;
+    gap: 5px; /* Adjust the gap as needed */
+  }
+  
+  .size-chart span {
+    display: inline-block;
+    width: 40px; /* Adjust the width to control the circle size */
+    height: 40px; /* Same as width to create a circle */
+    background-color: white; /* Background color for the circle */
+    color: black; /* Text color */
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+    border: 0.1px solid grey;
+  }
+  
+  .size-chart span:hover {
+    border: 0.1px solid red;
+  }
+  
+  a.myntra-button {
+    display: inline-block;
+    width: 12rem; /* Adjust the width as needed */
+    height: 3rem;
+    background-color: rgb(255,62,108);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight:400;
+    transition: background-color 0.2s; /* Add a transition effect */
+  }
+  
+  a.myntra-button:hover {
+    background-color: #e6325f;
+  }
+  
+  /* Adjust the padding and margin as needed */
+  a.myntra-button span {
+    margin-right: 1rem;
+    font-size: 20px; /* Adjust the icon size */
+  }
+  
+  /* Optional: Add box-shadow on hover for a material effect */
+  a.myntra-button:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #whishlist{
+    border: 0.1px solid grey;
+  }
+  
+
+
+.delivery-option p {
+    font-size: 16px;
+  }
+  
+ 
+  .delivery-option i {
+    font-size: 16px; 
+  }
+  
+  input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  input[type="text"]::placeholder {
+    color: #999;
+  }
+
+  input[type="text"]:focus {
+    border-color: #007bff; 
+  }
+.text-delivery{
+  font-size: 0.1rem;
+}
+.best-price{
+  color: #ff905a;
+}
+
+  

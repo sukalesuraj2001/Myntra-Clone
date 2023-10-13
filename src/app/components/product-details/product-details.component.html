@@ -1,25 +1,118 @@
-<div class="container-fluid mt-5">
-    <h3>Top Mobile Phones</h3>
-    <div class="row mt-3">
-        <div *ngFor="let x of products" class="col-md-2 mb-4">
+<div class="container">
+    <div class="row">
+        <h4>More about the {{result.category}}</h4>
+        <div class="col-md-6">
+            <!-- First div: Contains six images arranged in two rows -->
+            <div class="row mt-3">
+                <div class="col-6 mb-2">
+                    <img [src]="result.image" alt="Product Image" class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
 
-            <mat-card class="example-card" >
+                </div>
+                <div class="col-6 mb-2">
+                    <img [src]="result.image1" alt="Image 2"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                </div>
+                <div class="col-6 mb-2">
+                    <img [src]="result.image2" alt="Image 3"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                </div>
+                <div class="col-6 mb-2">
+                    <img [src]="result.image3" alt="Image 4"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                </div>
+                <div class="col-6 mb-2">
+                    <img [src]="result.image4" alt="Image 5"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                </div>
+                <div class="col-6 mb-2">
+                    <img [src]="result.image" alt="Image 6"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="mt-5">{{result.productName}}</h3>
+            <p class="text">{{result.description}}</p>
 
-                <img mat-card-image src="{{x.image}}" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <!-- <p>{{x.name}} </p> -->
-                    
-                    <app-rating></app-rating>
-                    <!-- <button (click)="viewProduct(x)" routerLink="Productdetails"   mat-raised-button color="primary">View Details</button> -->
-                    <!-- <button (click)="viewcart(x)"   mat-raised-button color="primary">View cart</button> -->
-                  
+            <p class="text fw-bold">{{result.price | currency:"INR"}}</p>
 
+            <p class="text-success fw-bold">inclusive of all taxes</p>
 
-                </mat-card-content>
-            </mat-card>
+            <p>Size Chart</p>
+            <div class="size-chart">
+                <span>38</span>
+                <span>40</span>
+                <span>42</span>
+                <span>38</span>
+                <span>44</span>
+                <span>46</span>
+            </div>
+            <div class="row">
+                <div class="col-4 mt-5">
+                  <a href="#" class="btn myntra-button" (click)="addToCart(result)">
+                    <span class="me-3"><i class="bi bi-bag"></i></span>ADD TO BAG
+                  </a>
+                </div>
+                <div class="col-4 mt-5">
+                  <a id="whishlist" href="#" class="btn myntra-button bg-white text-dark" routerLink="/wishlist" (click)="wishlist(result)">
+                    <span class="me-3" ><i class="bi bi-heart "></i></span>WHSHLIST
+                  </a>
+                </div>
+              </div>
+              
+              <div class="delivery-option mt-5">
+                <p>DELIVERY OPTIONS &nbsp;<i class="bi bi-truck"></i></p>
+                <input type="text" placeholder="Enter Pincode">
+                <p class="text-delivery">Please Enter the pincode to check delivery time & pay on delivery availabilty</p>
+              </div>
+              <div class="speciality mt-4">
+                <p>100% Original Products</p>
+                <p>Pay on delivery might be available</p>
+                <p>Easy 14 days return and exchange</p>
+                <p>Try and Buy might be available</p>
+              </div>
 
-
-
+              <div class="offers">
+                <p>Best Price : <b class="best-price fw-bold">Rs {{result.price}}</b> </p>
+                <p>Applicable on: Orders above Rs. 1299 (only on first purchase)</p>
+                <p>Coupon code: <a href="#" class="fw-bold text-decoration-none text-dark">{{coupon |uppercase}}</a> </p>
+                <p>Coupon Discount: Rs. 288 off (check cart for final savings)</p>
+                <p class="fw-bold">10% Instant Discount on ICICI Bank Credit and Debit Card</p>
+                <small>Min Spend ₹3,500, Max Discount ₹1,200.
+                </small>
+                <p class="fw-bold mt-2">EMI options available</p>
+                <p>EMI starting from Rs.53/month
+                </p>
+              </div>
         </div>
     </div>
-</div>
+
+
+
+
+
+
+    <div class="container-fluid">
+        <h5 class="mt-3">Similer Products:</h5>
+        <div class="row mt-4">
+            <div class="col-md-3 mt-3" *ngFor="let x of ethentic" [routerLink]="['/Product', x.id]">
+                <div class="card-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="{{x.image}}" class="card-img-top   ">
+                    <div class="card-body">
+                        <h5 class="card-title">{{x.productName}}</h5>
+                        <p>{{x.description}}</p>
+                        <p class="fw-bold">{{x.price | currency:"INR"}}</p>
+
+                        <app-rating [rate]="x.rating"></app-rating>
+                        <!-- <a href="#" (click)="greet(x);" class="btn btn-danger" (click)="addToCart()">Add to cart</a> -->
+
+
+
+                        <!-- <button class="btn btn-danger " (click)="addToCart(x)">See Details</button> -->
+                        <!-- <button class="btn btn-danger" [routerLink]="['/Product', x.id]">See Details</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

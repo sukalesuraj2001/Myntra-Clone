@@ -13,7 +13,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class CartComponent {
   
 // item.qty:number=1
-
+user:any;
+address:any;
   cartItems: Product[] = [];
   totalPrice:any;
   constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService) {}
@@ -26,6 +27,10 @@ ngOnInit(cartdata:any): void {
 // } else {
   
 // }
+this.user=localStorage.getItem("userName")
+this.address=sessionStorage.getItem("address")
+
+
   this.cartService.getCart(cartdata).subscribe((result:any)=>{
     console.log("cartproduct loaded successfully!");
     this.cartItems=result
@@ -48,6 +53,15 @@ decrease(item: any) {
 
 
 }
+
+
+isCollapsed = true;
+
+  toggleCollapse(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+
 
 
 remove(item: Product) {
@@ -86,6 +100,10 @@ placeOrder(item: any) {
     // You may want to reset the item's quantity or remove it from the cart here.
   });
 }
+
+
+
+
 
 
 }

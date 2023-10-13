@@ -15,6 +15,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
 import { OrderComponent } from './components/order/order.component';
 import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 const routes: Routes = [
@@ -69,6 +70,15 @@ const routes: Routes = [
     path: 'sellerOrder',
     component: SellerOrderComponent,
     title: 'Myntra | sellerOrder',
+  }, {
+    path: 'Product/:id',
+    component: ProductDetailsComponent,
+    title: 'Myntra | product-detail',
+  },
+  {
+    path: 'wishlist',
+    component: WishlistComponent,
+    title: 'Myntra | Wishlist',
   }, 
 ];
 

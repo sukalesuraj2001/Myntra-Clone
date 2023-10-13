@@ -4,8 +4,8 @@
       "productName": " Dress for Women",
       "description": "One Piece Dress for Women|Dress for Women Stylish|Western Dress|Dress for Women|Printed Dress Ivory SSD104R13",
       "category": "Western Wear",
-      "price": 1299,
-      "totalprice": 1299,
+      "price": 200,
+      "totalprice": 200,
       "image": "/assets/western wear/western2.jpg",
       "qty": 1,
       "rating": 4.5,
@@ -25,64 +25,120 @@
       "id": 36
     },
     {
-      "productName": "Ethentic wear",
-      "description": "Ethentic wear",
+      "productName": "Symbol Premium Men Allday Fresh Buttondown Oxford Shirt",
+      "description": "Symbol Premium Men Allday Fresh Buttondown Oxford Shirt",
+      "category": "Casual Wear",
+      "price": 1199,
+      "totalprice": 1199,
+      "image": "https://m.media-amazon.com/images/I/71nMh-+b12L._UX569_.jpg",
+      "qty": 1,
+      "rating": 4.3,
+      "sellerId": "1",
+      "id": 39
+    },
+    {
+      "productName": "Dennis Lingo Men's Blue Slim Fit Cotton Casual Shirt",
+      "description": "Dennis Lingo Men's Blue Slim Fit Cotton Casual Shirt",
+      "category": "Casual Wear",
+      "price": 569,
+      "totalprice": 569,
+      "image": "https://m.media-amazon.com/images/I/71ytzQsWdIL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.9,
+      "sellerId": "1",
+      "id": 40
+    },
+    {
+      "productName": "Myntra Brand - Symbol Men's Formal Shirt (Pack of 2)",
+      "description": "Myntra Brand - Symbol Men's Formal Shirt (Pack of 2)",
+      "category": "Casual Wear",
+      "price": 929,
+      "totalprice": 929,
+      "image": "https://m.media-amazon.com/images/I/71jtGpGWTFL._UY879_.jpg",
+      "qty": 1,
+      "rating": 3.9,
+      "sellerId": "1",
+      "id": 41
+    },
+    {
+      "productName": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
+      "description": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
       "category": "Ethentic Wear",
-      "price": 1522,
-      "totalprice": 1522,
-      "image": "/assets/ethenticWear/ethentic1.jpg",
+      "price": 1399,
+      "totalprice": 1399,
+      "image": "https://m.media-amazon.com/images/I/714Gybp1enL._UY879_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/712Z3Fas83L._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81s3lZ+EDbL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/91+0oJjnIML._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/815a9bjWWgL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 42
+    },
+    {
+      "productName": "EthnicJunction Women's Lucknowi  Georgette Anarkali Kurta",
+      "description": "EthnicJunction Women's Lucknowi  Georgette Anarkali Kurta",
+      "category": "Ethentic Wear",
+      "price": 399,
+      "totalprice": 399,
+      "image": "https://m.media-amazon.com/images/I/81B5O-xyq4L._UX679_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/81lairk0D9L._UX679_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81wCiaXwbRL._UX679_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/81kIL76eLXL._UX679_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81ZwsaWRGHL._UX679_.jpg",
       "qty": 1,
       "rating": 4.5,
       "sellerId": "1",
-      "id": 37
+      "id": 43
     },
     {
-      "productName": "Ethentic wear Dress",
-      "description": "Ethentic wear Dress",
+      "productName": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+      "description": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
       "category": "Ethentic Wear",
-      "price": 2000,
-      "totalprice": 2000,
-      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "price": 499,
+      "totalprice": 499,
+      "image": "https://m.media-amazon.com/images/I/81271aov+AL._UY741_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/7112Hciv9TL._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/71dTmfGFcxL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/61ruH8kG7QL._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81-SE6wtbNL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.2,
+      "sellerId": "1",
+      "id": 44
+    },
+    {
+      "productName": "ANNI DESIGNER Women Kurta with Pant & Dupatta",
+      "description": "ANNI DESIGNER Women Kurta with Pant & Dupatta",
+      "category": "Ethentic Wear",
+      "price": 599,
+      "totalprice": 599,
+      "image": "https://m.media-amazon.com/images/I/61KzT2OrERL._UY741_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/61o8AugpYOL._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/61O6V2qoMDL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/61RY8lzXJ7L._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/7122OJ5K+xL._UY741_.jpg",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 45
+    },
+    {
+      "productName": "Sanisa Women's Silk Blend Regular Kurta Set with Dupatta",
+      "description": "Sanisa Women's Silk Blend Regular Kurta Set with Dupatta",
+      "category": "Ethentic Wear",
+      "price": 535,
+      "totalprice": 535,
+      "image": "https://m.media-amazon.com/images/I/51U5Ac53H8L._UX569_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/41Hq-9Ntf0L._UX569_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/417B-NaabmL._UX569_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/51EBlHAzvKL._UX569_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/419lgBFMyBL._UX569_.jpg",
       "qty": 1,
       "rating": 3.5,
       "sellerId": "1",
-      "id": 38
-    },
-    {
-      "productName": "Ethentic wear Dress",
-      "description": "Ethentic wear Dress",
-      "category": "Ethentic Wear",
-      "price": 2000,
-      "totalprice": 2000,
-      "image": "/assets/ethenticWear/ethentic2.jpg",
-      "qty": 1,
-      "rating": 3.5,
-      "sellerId": "1",
-      "id": 38
-    },
-    {
-      "productName": "Ethentic wear Dress",
-      "description": "Ethentic wear Dress",
-      "category": "Ethentic Wear",
-      "price": 2000,
-      "totalprice": 2000,
-      "image": "/assets/ethenticWear/ethentic2.jpg",
-      "qty": 1,
-      "rating": 3.5,
-      "sellerId": "1",
-      "id": 38
-    },
-    {
-      "productName": "Ethentic wear Dress",
-      "description": "Ethentic wear Dress",
-      "category": "Ethentic Wear",
-      "price": 2000,
-      "totalprice": 2000,
-      "image": "/assets/ethenticWear/ethentic2.jpg",
-      "qty": 1,
-      "rating": 3.5,
-      "sellerId": "1",
-      "id": 38
+      "id": 46
     }
   ],
   "Cart": [
@@ -98,6 +154,36 @@
       "sellerId": "1",
       "id": 37,
       "userId": "2"
+    },
+    {
+      "productName": "Ethentic wear Dress",
+      "description": "Ethentic wear Dress",
+      "category": "Ethentic Wear",
+      "price": 2000,
+      "totalprice": 2000,
+      "image": "/assets/ethenticWear/ethentic2.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 38,
+      "userId": "1"
+    },
+    {
+      "productName": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
+      "description": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
+      "category": "Ethentic Wear",
+      "price": 1399,
+      "totalprice": 1399,
+      "image": "https://m.media-amazon.com/images/I/714Gybp1enL._UY879_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/712Z3Fas83L._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81s3lZ+EDbL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/91+0oJjnIML._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/815a9bjWWgL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 42,
+      "userId": "1"
     }
   ],
   "User": [
@@ -131,11 +217,11 @@
       "lastName": "Sukale",
       "email": "srsukale20@gmail.com",
       "mobileNumber": "09112768829",
-      "address1": " Kharadi Pune411011",
-      "address2": "Pune",
+      "address1": "Balaji Heights Rajaram Nagar Kharadi",
+      "address2": "Balaji Heights Rajaram Nagar Kharadi",
       "city": "Pune City",
       "state": "Maharashtra",
-      "image": "",
+      "image": "/assets/user.png",
       "userId": "1",
       "id": 1
     }
@@ -222,7 +308,11 @@
   "Banner": [
     {
       "image": "/assets/banner/banner1.png",
-      "image1": "/assets/banner/banner2.png"
+      "image1": "/assets/banner/banner4.png",
+      "image2": "/assets/banner/banner5.png",
+      "image3": "/assets/banner/banner6.png",
+      "image4": "/assets/banner/banner7.png",
+      "image5": "/assets/banner/banner8.png"
     }
   ],
   "Cat": [
@@ -284,6 +374,42 @@
     },
     {
       "slide11": "/assets/slider1/sl11.png"
+    }
+  ],
+  "Wishlist": [
+    {
+      "productName": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+      "description": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+      "category": "Ethentic Wear",
+      "price": 499,
+      "totalprice": 499,
+      "image": "https://m.media-amazon.com/images/I/81271aov+AL._UY741_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/7112Hciv9TL._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/71dTmfGFcxL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/61ruH8kG7QL._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81-SE6wtbNL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.2,
+      "sellerId": "1",
+      "id": 44,
+      "userId": "1"
+    },
+    {
+      "productName": "EthnicJunction Women's Lucknowi  Georgette Anarkali Kurta",
+      "description": "EthnicJunction Women's Lucknowi  Georgette Anarkali Kurta",
+      "category": "Ethentic Wear",
+      "price": 399,
+      "totalprice": 399,
+      "image": "https://m.media-amazon.com/images/I/81B5O-xyq4L._UX679_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/81lairk0D9L._UX679_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81wCiaXwbRL._UX679_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/81kIL76eLXL._UX679_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81ZwsaWRGHL._UX679_.jpg",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 43,
+      "userId": "1"
     }
   ]
 }

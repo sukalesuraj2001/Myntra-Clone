@@ -72,7 +72,9 @@ getCat(){
     
   // }
 
-
+getProductById(id:string){
+  return this.http.get(`${this.apiUrl}/Product/${id}`);
+}
 
 
 }

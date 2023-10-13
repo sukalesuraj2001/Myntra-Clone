@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, switchMap, throwError } from 'rxjs';
 import { Router } from '@angular/router';
+import { Product } from '../product_data/product';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,17 @@ getCat(){
 
 }
 
+
+
+// wishlist api start
+
+getWishlist(result:Product){
+  return this.http.post(`${this.apiUrl}/Wishlist`,result);
+
+}
+wishlist(){
+  const x=localStorage.getItem('userId')
+    return this.http.get(`${this.apiUrl}/Wishlist?userId=${x}`);
+}
   }
   

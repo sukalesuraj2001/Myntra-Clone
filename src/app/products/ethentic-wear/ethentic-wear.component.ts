@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cat } from 'src/app/product_data/cat';
+import { Product } from 'src/app/product_data/product';
 import { ProductsServicesService } from 'src/app/productsServices/products-services.service';
 import { CartService } from 'src/app/services/cart.service';
+import { FiltersService } from 'src/app/services/filters.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -13,7 +15,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class EthenticWearComponent {
 
 constructor(private ps1:ProductsServicesService,private ps2:ProductService,private cartService:CartService
-  ,private router:Router){}
+  ,private router:Router,private filter:FiltersService){}
 ethentic:Cat[]=[]
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -75,5 +77,18 @@ addToCart(data: any) {
     }
   });
 }
+
+
+
+// filter functionality
+
+lessThan() {
+  this.filter.getProducts().subscribe((res) => {
+    console.log("The filtered products are: " + JSON.stringify(res));
+    // If you want to use the filtered products in your component, assign them to a variable.
+    // this.filteredProducts = res;
+  });
+}
+
   
 }

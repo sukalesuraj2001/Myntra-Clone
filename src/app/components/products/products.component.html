@@ -327,11 +327,12 @@
 
 
 <div class="container-fluid mt-5">
-  <h3 class="text-center text-warning">{{category}}</h3>
+  <!-- <h3 class="text-center text-warning">{{category}}</h3> -->
+  <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/10/4/a45dd85d-7253-47ac-8797-70426db553f21696437688096-Category-Specials.jpg" class="img-fluid mb-2" alt="...">
   <div class="row mt-2">
     <div class="col-md-2" *ngFor="let x of products">
       <img src="{{x.cat1}}"   (click)="setCategory('Ethentic Wear') " routerLink="ethenticWear" class="img-fluid">
-      <img src="{{x.cat2}}" class="img-fluid">
+      <img src="{{x.cat2}}"  (click)="setCategory('Casual Wear')" routerLink="ethenticWear"  class="img-fluid">
       <img src="{{x.cat3}}" class="img-fluid">
       <img src="{{x.cat4}}" class="img-fluid">
       <img src="{{x.cat5}}" class="img-fluid">

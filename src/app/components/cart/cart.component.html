@@ -1,4 +1,4 @@
-  <mat-card>
+   <!-- <mat-card>
   <mat-card-header>
     <mat-card-title>My Shopping Cart</mat-card-title>
     
@@ -43,7 +43,7 @@
       </ng-container>
     </mat-card-content>
    
-  </mat-card>
+  </mat-card> -->
 
 
 
@@ -63,3 +63,37 @@
 
 
 
+
+
+
+
+
+ <div class="container container-with-space">
+   <hr>
+  <div class="row">
+    <div class="col-md-8  content">
+      <div class="customer">
+        <p>Deliver to : <b>{{user}}</b> </p>
+        <p>{{address}}</p>
+      </div> <div class="customer mt-1">
+        <p>Available Offers </p>
+        <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+        <div class="container">
+          
+          <p type="button" class="text-danger" (click)="toggleCollapse()">Show more</p>
+          <div [ngClass]="{'collapse': isCollapsed, 'show': !isCollapsed}">
+            <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+            <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+            <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+            <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+            <p>10% instant discount on ICICI Bank Credit and Debit Card on a minimum spend of Rs.3500.TCA</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="col-md-4 ">
+      <h5>order section</h5>
+    </div>
+  </div>
+</div>

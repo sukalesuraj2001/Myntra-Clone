@@ -1,19 +1,26 @@
-img{
-    height:40vh;
-    width: 20rem;
-
-}
+img {
+    height: 40vh;
+    width: 17rem;
+    transition: transform 0.2s;
+  }
+  
+  img:hover {
+    transform: scale(1.1); 
+  }
+  
 .form-check-label{
     font-size: 14px;
 }
-/* .form-check{
-    border: 0.1px solid rgb(219, 217, 217);
-    height: 17vh;
-} */
+.card-fluid{
+    cursor: pointer;
+}
 h3{
     font-size: 16px;
     font-weight: bold;
 }
 .col-md-2{
     border: 0.1px solid rgb(219, 217, 217);
+}
+.card-fluid{
+    height: 90%;
 }

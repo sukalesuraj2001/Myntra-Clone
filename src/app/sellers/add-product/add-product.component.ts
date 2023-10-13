@@ -28,6 +28,10 @@ export class AddProductComponent {
     price: new FormControl('', [ Validators.required,Validators.minLength(8), ]),
     totalprice: new FormControl('', [ Validators.required,Validators.minLength(8), ]),
     image: new FormControl('', [ Validators.required ]),
+    image1: new FormControl('', [ Validators.required ]),
+    image2: new FormControl('', [ Validators.required ]),
+    image3: new FormControl('', [ Validators.required ]),
+    image4: new FormControl('', [ Validators.required ]),
     
     qty: new FormControl('', [ Validators.required,Validators.minLength(8), ]),
     rating: new FormControl('', [ Validators.required,Validators.minLength(8), ]),
