@@ -41,6 +41,7 @@ import { AllCustomersComponent } from './sellers/all-customers/all-customers.com
 import { OrderComponent } from './components/order/order.component';
 import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { AddressComponent } from './components/address/address.component';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
 // import { CarouselModule } from '@coreui/angular';
@@ -79,6 +80,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
     OrderComponent,
     SellerOrderComponent,
     WishlistComponent,
+    AddressComponent,
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

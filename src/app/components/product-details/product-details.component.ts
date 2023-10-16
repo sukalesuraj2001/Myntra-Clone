@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Cart } from 'src/app/product_data/cart';
 import { Product } from 'src/app/product_data/product';
 import { ProductsServicesService } from 'src/app/productsServices/products-services.service';
 import { CartService } from 'src/app/services/cart.service';
@@ -11,6 +12,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent {
+  selectedSize:number=0
   products: Product[] = [];
   constructor(private ps1: ProductService, private route: ActivatedRoute,private router:Router,private cartService:CartService,private ps:ProductsServicesService,private cart:CartService) {}
   id!: string | null;
@@ -57,7 +59,7 @@ export class ProductDetailsComponent {
 
 // add to cart functionality
 
-addToCart(data: any) {
+addToCart(data: Cart) {
   const token = localStorage.getItem('token');
   if (!token) {
     alert("You need to log in to add products to the cart.");
@@ -65,7 +67,7 @@ addToCart(data: any) {
     return;
   }
 
- 
+  data.size=this.selectedSize 
   this.cartService.getCart(data).subscribe((responseData: any) => {
     console.log(responseData);
     let sum = 0;
@@ -80,7 +82,7 @@ addToCart(data: any) {
     if (sum > 0) {
       alert("Product Already exists");
     } else {
-      data.userId=localStorage.getItem("userId")
+      data.userId=localStorage.getItem("userId")?? ""
       this.cartService.addInCart(data).subscribe((result) => {
         alert("Product added Successfully!");
         this.router.navigate(['cart'])
@@ -93,6 +95,10 @@ addToCart(data: any) {
   });
 }
 
+selectSize(size: number) {
+  this.selectedSize = size;
+  console.log("the size is " + this.selectedSize);
+}
 
 
 
@@ -117,7 +123,7 @@ generateRandomString(length: number): string {
 
 
 
-wishlist(result:any){
+wishlist(result:Product){
   // alert("click on wishlist")
   // console.log("the wishlist are"+JSON.stringify(result));
   result.userId=localStorage.getItem("userId")?? ""

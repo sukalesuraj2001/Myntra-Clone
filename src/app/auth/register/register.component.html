@@ -4,7 +4,7 @@
 
 
 <div class="mytra-login">
-  <form *ngIf="showLoginForm" (ngSubmit)="onLoginSubmit(loginForm.value)  " [formGroup]="loginForm">
+  <form *ngIf="showLoginForm" (ngSubmit)="onLoginSubmit()  " [formGroup]="loginForm">
     <img src="https://1000logos.net/wp-content/uploads/2022/08/Myntra-Logo.png" alt="Myntra Logo">
     <h1 class="heading">Welcome to India's Largest Online Fashion Store</h1>
     <p>Please login to your account</p>
@@ -40,7 +40,7 @@
     <button class="signup" (click)="showLoginForm = false">Sign Up</button>
   </form>
 
-  <form *ngIf="!showLoginForm" #f="ngForm" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
+  <form *ngIf="!showLoginForm" #f="ngForm" (ngSubmit)="formsubmit()" [formGroup]="profileForm">
     <img src="https://1000logos.net/wp-content/uploads/2022/08/Myntra-Logo.png" alt="Myntra Logo">
     <h1 class="heading">Welcome to India's Largest Online Fashion Store</h1>
     <p>Create a new account</p>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, switchMap, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { Product } from '../product_data/product';
+import { Cart } from '../product_data/cart';
 
 @Injectable({
   providedIn: 'root'
@@ -11,17 +12,17 @@ export class CartService {
   private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient,private router:Router) { }
-
+ 
   // retirve cart products
-  getCart(cartdata:any) {
+  getCart(cartdata:Cart):Observable<Cart[]> {
     // this.router.navigate(['cart'])
-    return this.http.get(`${this.apiUrl}/Cart?userId=${localStorage.getItem("userId")}`)
+    return this.http.get<Cart[]>(`${this.apiUrl}/Cart?userId=${localStorage.getItem("userId")}`)
   }
 
   // Add a product to the cart if it is not present
-    addInCart(data:any){
+    addInCart(data:Cart):Observable<Cart[]>{
       
-      return this.http.post(`${this.apiUrl}/Cart?userId=${localStorage.getItem("userId")}`, data);
+      return this.http.post<Cart[]>(`${this.apiUrl}/Cart?userId=${localStorage.getItem("userId")}`, data);
 
  }
 
@@ -31,8 +32,8 @@ removeCart(itemId: number) {
 }
 
 
-getCat(){
-  return this.http.get(`${this.apiUrl}/Cat`)
+getCat():Observable<Cart>{
+  return this.http.get<Cart>(`${this.apiUrl}/Cat`)
 
 }
 
@@ -40,13 +41,13 @@ getCat(){
 
 // wishlist api start
 
-getWishlist(result:Product){
-  return this.http.post(`${this.apiUrl}/Wishlist`,result);
+getWishlist(result:Product):Observable<Product>{
+  return this.http.post<Product>(`${this.apiUrl}/Wishlist`,result);
 
 }
-wishlist(){
+wishlist():Observable<Product>{
   const x=localStorage.getItem('userId')
-    return this.http.get(`${this.apiUrl}/Wishlist?userId=${x}`);
+    return this.http.get<Product>(`${this.apiUrl}/Wishlist?userId=${x}`);
 }
   }
   

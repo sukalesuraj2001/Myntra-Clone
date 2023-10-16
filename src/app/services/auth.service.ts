@@ -1,42 +1,35 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Register } from '../product_data/register';
+import { Observable } from 'rxjs';
+import { Profile } from '../product_data/profileData';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private apiUrl = 'http://localhost:3000';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+  // user login and registration Api start
 
+  userRegister(userData: Register): Observable<Register> {
+    return this.http.post<Register>(`${this.apiUrl}/User`, userData);
+  }
 
-userRegister(userData:any){
+  userLogin(userData: any) {
+    return this.http.get(`${this.apiUrl}/User`, userData);
+  }
+  // user login and registration Api end
 
-  return this.http.post(`${this.apiUrl}/User`,userData);
-}
+  // userProfile start
 
-userLogin(userData:any){
+  addProfile(data: Profile): Observable<Profile[]> {
+    return this.http.post<Profile[]>(`${this.apiUrl}/Profile`, data);
+  }
 
-
-  return this.http.get(`${this.apiUrl}/User`,userData);
-  
-
-  
-}
-
-// userProfile start
-
-addProfile(data:any){
-
-  return this.http.post(`${this.apiUrl}/Profile`,data);
-
-}
-
-getProfile(userdata:any){
-
-const x=localStorage.getItem('userId')
-    return this.http.get(`${this.apiUrl}/Profile?id=${x}`);
-
-}
-
-
+  getProfile(userdata: Profile): Observable<Profile[]> {
+    const x = localStorage.getItem('userId');
+    return this.http.get<Profile[]>(`${this.apiUrl}/Profile?id=${x}`);
+  }
+   // userProfile end
 }

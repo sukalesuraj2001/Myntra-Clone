@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cart } from 'src/app/product_data/cart';
 import { Cat } from 'src/app/product_data/cat';
 import { Product } from 'src/app/product_data/product';
 import { ProductsServicesService } from 'src/app/productsServices/products-services.service';
@@ -18,8 +19,7 @@ constructor(private ps1:ProductsServicesService,private ps2:ProductService,priva
   ,private router:Router,private filter:FiltersService){}
 ethentic:Cat[]=[]
 ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
+
 
 
   this.ps1.getCategory().subscribe((result:any)=>{
@@ -40,7 +40,7 @@ userId(){
 
 
 // add to cart functionality start
-addToCart(data: any) {
+addToCart(data: Cart) {
   const token = localStorage.getItem('token');
   if (!token) {
     alert("You need to log in to add products to the cart.");
@@ -51,7 +51,7 @@ addToCart(data: any) {
   this.ps2.incrementCart();
   console.log(data.id);
  
-  this.cartService.getCart(data).subscribe((responseData: any) => {
+  this.cartService.getCart(data as Cart).subscribe((responseData: any) => {
     console.log(responseData);
     let sum = 0;
     let count = 0;
@@ -65,13 +65,13 @@ addToCart(data: any) {
     if (sum > 0) {
       alert("Product Already exists");
     } else {
-      data.userId=localStorage.getItem("userId")
+      data.userId=localStorage.getItem("userId")?? ""
       this.cartService.addInCart(data).subscribe((result) => {
         alert("Product added Successfully!");
         this.router.navigate(['cart'])
         console.log(data);
-        // window.location.reload();
-        console.log("the userid is "+this.userId());
+        window.location.reload();
+        // console.log("the userid is "+this.userId());
         
       });
     }
@@ -84,7 +84,7 @@ addToCart(data: any) {
 
 lessThan() {
   this.filter.getProducts().subscribe((res) => {
-    console.log("The filtered products are: " + JSON.stringify(res));
+    // console.log("The filtered products are: " + JSON.stringify(res));
     // If you want to use the filtered products in your component, assign them to a variable.
     // this.filteredProducts = res;
   });

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Profile } from 'src/app/product_data/profileData';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -30,20 +31,22 @@ constructor(private auth:AuthService,private router:Router){}
  
   });
 
-  formsubmit(data: any): void {
-    console.log(this.profileForm.value.address1);
+
+
+  formsubmit(data: Partial<Profile>): void {
+    console.log(data.address1);
+  
+    // sessionStorage.setItem("address", JSON.stringify(data.address1));
+    sessionStorage.setItem("profileData", JSON.stringify(data));
     
-    sessionStorage.setItem("address",JSON.stringify(this.profileForm.value.address1))
-    sessionStorage.setItem("profileData", JSON.stringify(this.profileForm.value));
-    data.userId=localStorage.getItem("userId")
-
-
-    this.auth.addProfile(data).subscribe((res)=>{
-      
-      alert("Profile Edited Successfull!")
-      // sessionStorage.setItem("profileData", JSON.stringify(this.profileForm.value));
-
-      this.router.navigate(['/profile'])
-    })
-}
+    // Ensure that 'userId' is set from localStorage
+    data.userId = localStorage.getItem("userId") || "";
+  
+    this.auth.addProfile(data as Profile).subscribe((res) => {
+      alert("Profile Edited Successfully!");
+      this.router.navigate(['/profile']);
+    });
+  }
+  
+  
 }

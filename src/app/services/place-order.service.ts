@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Cart } from '../product_data/cart';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,9 +29,9 @@ export class PlaceOrderService {
   removeProduct(itemId: number) {
     return this.http.delete(`${this.apiUrl}/Buy/${itemId}`);
   }
-  orderProduct(data:any){
+  orderProduct(data: any) {
     return this.http.post(`${this.apiUrl}/Order`, data);
   }
-
+  
 
 }

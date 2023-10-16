@@ -143,32 +143,6 @@
   ],
   "Cart": [
     {
-      "productName": " Nightwear, Sleepwear,",
-      "description": "CUPID Women Plus Size Cotton Round Neck Full Sleeves T-Shirt, Nightwear, Sleepwear, Daily Use Gym n Lounge Wear Long Tops with Pocket for Ladies",
-      "category": "Long Wear",
-      "price": 646,
-      "totalprice": 646,
-      "image": "/assets/long wear/long wear.jpg",
-      "qty": 1,
-      "rating": 2.5,
-      "sellerId": "1",
-      "id": 37,
-      "userId": "2"
-    },
-    {
-      "productName": "Ethentic wear Dress",
-      "description": "Ethentic wear Dress",
-      "category": "Ethentic Wear",
-      "price": 2000,
-      "totalprice": 2000,
-      "image": "/assets/ethenticWear/ethentic2.jpg",
-      "qty": 1,
-      "rating": 3.5,
-      "sellerId": "1",
-      "id": 38,
-      "userId": "1"
-    },
-    {
       "productName": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
       "description": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
       "category": "Ethentic Wear",
@@ -184,6 +158,60 @@
       "sellerId": "1",
       "id": 42,
       "userId": "1"
+    },
+    {
+      "productName": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+      "description": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+      "category": "Ethentic Wear",
+      "price": 499,
+      "totalprice": 499,
+      "image": "https://m.media-amazon.com/images/I/81271aov+AL._UY741_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/7112Hciv9TL._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/71dTmfGFcxL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/61ruH8kG7QL._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81-SE6wtbNL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.2,
+      "sellerId": "1",
+      "id": 44,
+      "size": 38,
+      "userId": "2"
+    },
+    {
+      "productName": "ANNI DESIGNER Women Kurta with Pant & Dupatta",
+      "description": "ANNI DESIGNER Women Kurta with Pant & Dupatta",
+      "category": "Ethentic Wear",
+      "price": 599,
+      "totalprice": 599,
+      "image": "https://m.media-amazon.com/images/I/61KzT2OrERL._UY741_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/61o8AugpYOL._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/61O6V2qoMDL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/61RY8lzXJ7L._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/7122OJ5K+xL._UY741_.jpg",
+      "qty": 1,
+      "rating": 4.5,
+      "sellerId": "1",
+      "id": 45,
+      "size": 38,
+      "userId": "2"
+    },
+    {
+      "productName": "Sanisa Women's Silk Blend Regular Kurta Set with Dupatta",
+      "description": "Sanisa Women's Silk Blend Regular Kurta Set with Dupatta",
+      "category": "Ethentic Wear",
+      "price": 535,
+      "totalprice": 535,
+      "image": "https://m.media-amazon.com/images/I/51U5Ac53H8L._UX569_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/41Hq-9Ntf0L._UX569_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/417B-NaabmL._UX569_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/51EBlHAzvKL._UX569_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/419lgBFMyBL._UX569_.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 46,
+      "size": 46,
+      "userId": "2"
     }
   ],
   "User": [
@@ -193,6 +221,13 @@
       "email": "srsukale20@gmail.com",
       "password": "Suraj@2001",
       "id": 1
+    },
+    {
+      "firstName": "Jhon",
+      "lastName": "anderson",
+      "email": "jhon@gmail.com",
+      "password": "Jhon@2001",
+      "id": 2
     }
   ],
   "Seller": [
@@ -224,6 +259,19 @@
       "image": "/assets/user.png",
       "userId": "1",
       "id": 1
+    },
+    {
+      "firstName": "Jhon",
+      "lastName": "Anderson",
+      "email": "jhon@gmail.com",
+      "mobileNumber": "9112768829",
+      "address1": "Balaji Heights Rajaram Nagar Kharadi Pune 411011",
+      "address2": "Balaji Heights Rajaram Nagar Kharadi Pune 411011",
+      "city": "Pune City",
+      "state": "Maharashtra",
+      "image": "",
+      "userId": "2",
+      "id": 2
     }
   ],
   "Buy": [
@@ -242,68 +290,32 @@
     }
   ],
   "Order": [
-    [
-      {
-        "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-        "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-        "category": "Sport Wear",
-        "price": 279,
-        "totalprice": 837,
-        "image": "/assets/sport wear/sport2.jpg",
-        "qty": 3,
-        "rating": 3,
-        "sellerId": "1",
-        "id": 36,
-        "userId": "1",
-        "orderid": "6584",
-        "profile": [
-          {
-            "firstName": "Suraj",
-            "lastName": "Sukale",
-            "email": "srsukale20@gmail.com",
-            "mobileNumber": "09112768829",
-            "address1": " Kharadi Pune411011",
-            "address2": "Pune",
-            "city": "Pune City",
-            "state": "Maharashtra",
-            "image": "",
-            "userId": "1",
-            "id": 1
-          }
-        ]
-      }
-    ],
-    [
-      {
-        "productName": " Click to open expanded view Visit the CHKOKKO Store CHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-        "description": "\nClick to open expanded view\nVisit the CHKOKKO Store\nCHKOKKO Men's Solid Regular Fit Sports T-Shirt",
-        "category": "Sport Wear",
-        "price": 279,
-        "totalprice": 837,
-        "image": "/assets/sport wear/sport2.jpg",
-        "qty": 3,
-        "rating": 3,
-        "sellerId": "2",
-        "id": 36,
-        "userId": "1",
-        "orderid": "6584",
-        "profile": [
-          {
-            "firstName": "Suraj",
-            "lastName": "Sukale",
-            "email": "srsukale20@gmail.com",
-            "mobileNumber": "09112768829",
-            "address1": " Kharadi Pune411011",
-            "address2": "Pune",
-            "city": "Pune City",
-            "state": "Maharashtra",
-            "image": "",
-            "userId": "1",
-            "id": 1
-          }
-        ]
-      }
-    ]
+    {
+      "orderID": 8060,
+      "totalAmount": 638.8,
+      "selectedItems": [
+        {
+          "productName": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+          "description": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
+          "category": "Ethentic Wear",
+          "price": 499,
+          "totalprice": 499,
+          "image": "https://m.media-amazon.com/images/I/81271aov+AL._UY741_.jpg",
+          "image1": "https://m.media-amazon.com/images/I/7112Hciv9TL._UY741_.jpg",
+          "image2": "https://m.media-amazon.com/images/I/71dTmfGFcxL._UY741_.jpg",
+          "image3": "https://m.media-amazon.com/images/I/61ruH8kG7QL._UY741_.jpg",
+          "image4": "https://m.media-amazon.com/images/I/81-SE6wtbNL._UY741_.jpg",
+          "qty": 2,
+          "rating": 3.2,
+          "sellerId": "1",
+          "id": 44,
+          "size": 38,
+          "userId": "2",
+          "selected": true
+        }
+      ],
+      "id": 1
+    }
   ],
   "Banner": [
     {
@@ -410,6 +422,23 @@
       "sellerId": "1",
       "id": 43,
       "userId": "1"
+    },
+    {
+      "productName": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
+      "description": "TRENDMALLS Cotton Kurta Pant with Dupatta Salwar Suit Set for Women",
+      "category": "Ethentic Wear",
+      "price": 1399,
+      "totalprice": 1399,
+      "image": "https://m.media-amazon.com/images/I/714Gybp1enL._UY879_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/712Z3Fas83L._UY741_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81s3lZ+EDbL._UY741_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/91+0oJjnIML._UY741_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/815a9bjWWgL._UY741_.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 42,
+      "userId": "2"
     }
   ]
 }

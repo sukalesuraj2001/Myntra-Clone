@@ -40,13 +40,14 @@
 
             <p>Size Chart</p>
             <div class="size-chart">
-                <span>38</span>
-                <span>40</span>
-                <span>42</span>
-                <span>38</span>
-                <span>44</span>
-                <span>46</span>
+                <span (click)="selectSize(38)">38</span>
+                <span (click)="selectSize(40)">40</span>
+                <span (click)="selectSize(42)">42</span>
+                <span (click)="selectSize(38)">38</span>
+                <span (click)="selectSize(44)">44</span>
+                <span (click)="selectSize(46)">46</span>
             </div>
+            
             <div class="row">
                 <div class="col-4 mt-5">
                   <a href="#" class="btn myntra-button" (click)="addToCart(result)">

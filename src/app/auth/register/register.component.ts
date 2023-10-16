@@ -10,6 +10,7 @@ import {
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthGuard } from 'src/app/guards/auth-guard.guard';
+import { Login, Register } from 'src/app/product_data/register';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -88,7 +89,15 @@ export class RegisterComponent {
     ]),
   });
 
-  formsubmit(userData: any): void {
+  formsubmit(): void {
+    const formData = this.profileForm.value;
+    const userData: Register = {
+      firstName: formData.firstName || '', 
+      lastName: formData.lastName || '',
+      email: formData.email || '',
+      password: formData.password || '',
+    };
+  
     this.auth.userRegister(userData).subscribe((result) => {
       this.registrationSuccess = true;
       setTimeout(() => {
@@ -96,7 +105,7 @@ export class RegisterComponent {
       }, 1000);
     });
   }
-
+  
   get user() {
     return this.profileForm.get('user');
   }
@@ -114,21 +123,23 @@ export class RegisterComponent {
     ]),
   });
 
-  onLoginSubmit(userData: any) {
-    console.log(this.loginForm.value);
-    console.log(this.loginForm.value.email);
-    console.log(this.loginForm.value.password);
-
-    this.auth.userLogin(userData).subscribe((responseData: any) => {
+  onLoginSubmit(): void {
+    const formData = this.loginForm.value;
+    const userData: Login = {
+      email: formData.email || '', // Use empty string as a default value if it's null or undefined
+      password: formData.password || '', // Use empty string as a default value if it's null or undefined
+    };
+  
+    this.auth.userLogin(userData as Register).subscribe((responseData: any) => {
       let count = 0;
-
+  
       responseData &&
         responseData.forEach((element: any) => {
           console.log(element.email);
           console.log(element.id);
           if (
-            element.email === this.loginForm.value.email &&
-            element.password === this.loginForm.value.password
+            element.email === formData.email &&
+            element.password === formData.password
           ) {
             count++;
             localStorage.setItem('userId', element.id);
@@ -138,30 +149,23 @@ export class RegisterComponent {
             );
           }
         });
-
+  
       if (count > 0) {
         this.loginSuccess = true;
         localStorage.setItem(
           'token',
-          this.loginForm.value.email + ' ' + this.loginForm.value.password
+          formData.email + ' ' + formData.password
         );
-        // this.auth.getProfile().subscribe((res)=>{
-        //   const data=JSON.stringify(res)
-        //   console.log("data "+data);
-        //   sessionStorage.setItem("profileData", data);
-        //  })
-
+  
         setTimeout(() => {
           this.router.navigate(['/']);
         }, 2000);
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 2000);
       } else {
         this.loginSuccess = false;
       }
-      // window.location.reload();
+  
       this.loginAttempt = true;
     });
   }
+  
 }

@@ -1,8 +1,14 @@
 export class Profile {
-    firstName: string="";
-    lastName: string="";
-    email: string="";
-    mobileNumber: number=0;
-    address1: string="";
-    // Add other properties as needed
-  }
+  firstName: string | null = null;
+  lastName: string | null = null;
+  email: string | null = null;
+  mobileNumber: string | null = null; // Change the type to string
+  address1: string | null = null;
+  address2: string | null = null;
+  userId: string | null = null;
+  image: string | null = null;
+  state: string | null = null;
+  city: string | null = null;
+
+  // Add other properties as needed
+}
