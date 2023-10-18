@@ -1052,6 +1052,24 @@
       "id": 49,
       "size": 42,
       "userId": "2"
+    },
+    {
+      "productName": "Miraan Men's",
+      "description": "\nClick to open expanded view\nVisit the Miraan Store\nMiraan Men's Long Sleeve Casual Denim Shirt (SIGDENIM)",
+      "category": "Casual Wear",
+      "price": 599,
+      "totalprice": 599,
+      "image": "https://m.media-amazon.com/images/I/81uTb5UwUgL._UY550_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/81a6P15nbfL._UY550_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81seM0U3LAL._UY550_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/71AlDjaZdPL._UY550_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/81a6P15nbfL._UY550_.jpg",
+      "qty": 1,
+      "rating": 3.5,
+      "sellerId": "1",
+      "id": 56,
+      "size": 42,
+      "userId": "2"
     }
   ],
   "User": [
