@@ -161,7 +161,7 @@
         <p>Discount On MRP: <b class="totalmrp text-success fw-bold">{{totalmrp*(discount/100) |currency:"INR"}}</b> </p>
         <p>Shipping Charges: <b class="totalmrp text-danger fw-bold">{{shipping | currency:"INR"}}</b></p>
         <hr>
-        <p>Total Amount: <b class="totalmrp fw-bold">{{(totalmrp -(totalmrp*(discount/100)) + 40) | currency: "INR"}}</b></p>
+        <p>Total Amount: <b class="totalmrp fw-bold">{{(totalmrp -(totalmrp*(discount/100)) + shipping) | currency: "INR"}}</b></p>
 
 
       </div>

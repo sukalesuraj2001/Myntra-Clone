@@ -67,6 +67,13 @@ addToCart(data: Cart) {
     return;
   }
 
+
+  //  fire error if user is not selected size
+  if (this.selectedSize === 0) {
+    alert("Please select a size before adding the product to the cart.");
+    return;
+  }
+
   data.size=this.selectedSize 
   this.cartService.getCart(data).subscribe((responseData: any) => {
     console.log(responseData);

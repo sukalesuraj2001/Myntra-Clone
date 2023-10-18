@@ -333,12 +333,12 @@
     <div class="col-md-2" *ngFor="let x of products">
       <img src="{{x.cat1}}"   (click)="setCategory('Ethentic Wear') " routerLink="ethenticWear" class="img-fluid">
       <img src="{{x.cat2}}"  (click)="setCategory('Casual Wear')" routerLink="ethenticWear"  class="img-fluid">
-      <img src="{{x.cat3}}" class="img-fluid">
-      <img src="{{x.cat4}}" class="img-fluid">
-      <img src="{{x.cat5}}" class="img-fluid">
-      <img src="{{x.cat6}}" class="img-fluid">
-      <img src="{{x.cat7}}" class="img-fluid">
-      <img src="{{x.cat8}}" class="img-fluid">
+      <img src="{{x.cat3}}" class="img-fluid" (click)="setCategory('Active Wear')" routerLink="ethenticWear" >
+      <img src="{{x.cat4}}" class="img-fluid" (click)="setCategory('Active Wear-mens')" routerLink="ethenticWear" >
+      <img src="{{x.cat5}}" class="img-fluid" (click)="setCategory('Western Wear')" routerLink="ethenticWear" >
+      <img src="{{x.cat6}}" class="img-fluid" (click)="setCategory('Sport Wear')" routerLink="ethenticWear" >
+      <img src="{{x.cat7}}" class="img-fluid"(click)="setCategory('Long Wear')" routerLink="ethenticWear" >
+      <img src="{{x.cat8}}" class="img-fluid" (click)="setCategory('Watches')" routerLink="ethenticWear" >
     </div>
   </div>
 </div>

@@ -56,7 +56,7 @@ this.updateSelectedItemCount();
 
 
 this.user=localStorage.getItem("userName")
-this.address=sessionStorage.getItem("address")
+this.address=localStorage.getItem("address")
 
 
   this.cartService.getCart(cartdata as Cart).subscribe((result:any)=>{

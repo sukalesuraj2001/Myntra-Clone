@@ -24,6 +24,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 // import {MatGridListModule} from '@angular/material/grid-list';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { MatInputModule } from '@angular/material/input';
 import { CartComponent } from './components/cart/cart.component';
@@ -105,6 +107,8 @@ import { AddressComponent } from './components/address/address.component';
     MatMenuModule,
     ReactiveFormsModule,
     CarouselModule.forRoot(),
+    MatCheckboxModule,
+    MatRadioModule
 
     
     

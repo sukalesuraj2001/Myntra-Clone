@@ -3,10 +3,10 @@ img {
     width: 17rem;
     transition: transform 0.2s;
   }
-  
+/*   
   img:hover {
     transform: scale(1.1); 
-  }
+  } */
   
 .form-check-label{
     font-size: 14px;
@@ -20,7 +20,39 @@ h3{
 }
 .col-md-2{
     border: 0.1px solid rgb(219, 217, 217);
+    width: 15rem;
 }
 .card-fluid{
     height: 90%;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #282c3f;
+}
+.desc{
+    color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+}
+label{
+    cursor: pointer;
+    color:black;
+    /* font-weight: 700; */
+}
+.form-check{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    border-bottom: 1px solid #e9e9ed;
+    position: relative;
+    border-right: 1px solid #edebef;
 }

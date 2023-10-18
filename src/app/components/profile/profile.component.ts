@@ -21,7 +21,7 @@ export class ProfileComponent {
       this.profiledata = res;
       if (this.profiledata.length > 0) {
         console.log("the address is " + this.profiledata[0].address1);
-        sessionStorage.setItem("address",JSON.stringify(this.profiledata[0].address1))
+        localStorage.setItem("address",JSON.stringify(this.profiledata[0].address1))
       } else {
         console.log("Profile data is empty or undefined.");
       }

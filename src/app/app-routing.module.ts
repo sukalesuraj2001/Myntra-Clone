@@ -21,7 +21,7 @@ import { AddressComponent } from './components/address/address.component';
 
 const routes: Routes = [
   { path: '', component: ProductsComponent },
-  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard], title: ' SHOPPING BAG' },
   {
     path: 'Productdetails',
     component: ProductDetailsComponent,

@@ -14,7 +14,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./ethentic-wear.component.css']
 })
 export class EthenticWearComponent {
-
+counter:any
 constructor(private ps1:ProductsServicesService,private ps2:ProductService,private cartService:CartService
   ,private router:Router,private filter:FiltersService){}
 ethentic:Cat[]=[]
@@ -27,6 +27,9 @@ ngOnInit(): void {
     console.log(result);
     
     this.ethentic=result
+    const entries = Object.entries(result);
+      this.counter = entries.length;
+      console.log('Counter is ' + this.counter);
     const x=sessionStorage.getItem('cat')
     console.log(x);
     
