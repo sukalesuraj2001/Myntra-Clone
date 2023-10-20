@@ -20,6 +20,23 @@ mat-card{
 
 
 
+@media screen and (max-width: 768px) {
+    .pimage {
+      height: 150px;
+    }
+  
+    .col-md-2 {
+      margin-bottom: 10px;
+    }
+    img{
+        width: 100%;
+    }
+  }
+  
+
+
+
+
 /* ------------------------------- */
 
 

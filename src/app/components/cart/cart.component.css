@@ -10,7 +10,7 @@
 
 .button {
   margin: 0 5px;
-  /* Add some margin between the buttons */
+ 
 }
 
 .count {
@@ -230,18 +230,18 @@ span {
 
 .size-chart {
   display: flex;
-  gap: 5px; /* Adjust the gap as needed */
+  gap: 5px; 
 }
 
 .size-chart span {
   display: inline-block;
-  width: 20px; /* Adjust the width to control the circle size */
-  height: 20px; /* Same as width to create a circle */
-  background-color: white; /* Background color for the circle */
-  color: black; /* Text color */
+  width: 20px; 
+  height: 20px; 
+  background-color: white; 
+  color: black; 
   text-align: center;
   /* line-height: 40px; */
-  border-radius: 20%; /* Make it circular */
+  border-radius: 20%;
   cursor: pointer;
   border: 0.1px solid grey;
   font-size: 14px;
@@ -291,11 +291,7 @@ span {
 
 
 
-@media screen and (max-width: 768px) {
-  .button-container {
-    flex-direction: column;
-  }
-}
+
 
 
 
@@ -308,3 +304,96 @@ span {
     margin-top: -2rem;
   }
 }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container-with-space {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .col-md-4 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content .customer {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .customer p {
+    font-size: 12px;
+    line-height: 1.2rem;
+  }
+
+  .product-detail p {
+    font-size: 12px;
+    line-height: 1.2rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container p {
+    font-size: 12px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .apply-btn button {
+    font-size: 12px;
+  }
+
+  .price-details p {
+    font-size: 12px;
+  }
+
+  #btn {
+    font-size: 14px;
+  }
+
+  .check,
+  .checks {
+    top: 10px;
+    left: 5px;
+    font-size: 12px;
+  }
+
+  .size-chart span {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+  
+  .size-chart span:hover {
+    border: 0.1px solid red;
+  }
+
+  .count {
+    width: 30px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .qty p {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .quantity-button {
+    font-size: 16px;
+  }
+}
+

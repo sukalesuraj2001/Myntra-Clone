@@ -1,58 +1,134 @@
 img {
     height: 40vh;
-    width: 17rem;
-    transition: transform 0.2s;
+    width: 100%;
+    cursor: pointer;
+    /* transition: transform 0.2s; */
   }
-/*   
-  img:hover {
-    transform: scale(1.1); 
-  } */
-  
-.form-check-label{
+
+
+
+
+
+
+  .container-fluid {
+      display: flex;
+      align-items: flex-start;
+  }
+
+  .filter {
+      width: 18%;
+      padding: 20px;
+      /* background: #f0f0f0; */
+  }
+
+  .products {
+      width: 80%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+  }
+
+  .product-card {
+      width: 19%;
+      margin-bottom: 20px;
+      background: #ffffff;
+      /* border: 1px solid #ddd; */
+      padding: 10px;
+      text-align: center;
+  }
+  .product-card p {
+    line-height: 1rem;
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+
+  .product-card img {
+      max-width: 100%;
+     
+  }
+  .button {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.button p {
+    margin-right: 10px;
+    font-weight: 700;
     font-size: 14px;
 }
-.card-fluid{
+.clear{
+    color: rgb(255, 63, 108);
     cursor: pointer;
 }
-h3{
-    font-size: 16px;
-    font-weight: bold;
+
+
+.form-check ,label ,input{
+margin: 0;
+padding: 0;
+font-weight: 400;
+font-size: 14px;
+font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-.col-md-2{
-    border: 0.1px solid rgb(219, 217, 217);
-    width: 15rem;
-}
-.card-fluid{
-    height: 90%;
-}
-.card-title{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #282c3f;
+.price{
+    margin: 0;
+    padding: 0;
 }
 .desc{
     color: #535766;
     font-size: 14px;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-top: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 400;
-    display: block;
 }
-label{
-    cursor: pointer;
-    color:black;
-    /* font-weight: 700; */
+.name{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+    color: #282c3f;
 }
-.form-check{
-    padding-top: 20px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    border-bottom: 1px solid #e9e9ed;
-    position: relative;
-    border-right: 1px solid #edebef;
+.amount{
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
 }
+.apparel h4{
+    font-size: 17px;
+}
+
+.form-check-input[type="radio"]:checked  {
+    border-color:   rgb(255, 63, 108) !important; 
+    background-color: rgb(255, 63, 108) !important;
+}
+
+
+
+
+
+/* Add your existing CSS styles here */
+
+/* Media query for small devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  
+    .container-fluid {
+      flex-direction: column;
+    }
+  
+    .filter {
+      width: 100%;
+    }
+  
+    .products {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .product-card {
+      width: 100%;
+    }
+  }
+  

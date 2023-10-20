@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import items from 'razorpay/dist/types/items';
 import { Cart } from 'src/app/product_data/cart';
 import { Product } from 'src/app/product_data/product';
+import { Profile } from 'src/app/product_data/profileData';
+import { AuthService } from 'src/app/services/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { PlaceOrderService } from 'src/app/services/place-order.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -15,7 +17,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class CartComponent {
 
   selectedQuantity:number=0;
- discount=40;
+ discount=10;
  shipping=40;
 // item.qty:number=1
 selectedItemCount: number = 0;
@@ -24,19 +26,23 @@ selectAllItems: boolean = false;
 cartItem: any[] = []; 
 counter:number=0
 user:any;
+users:any;
 address:any;
   cartItems: Product[] = [];
   totalPrice:Product[]=[];
   totalmrp:any
   amount: any;
 
-  constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService) {}
+  constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService,private auth:AuthService) {}
 
 ngOnInit(cartdata:Cart): void {
 
     // discount on price
 
-  
+    this.auth.getProfile(new Profile).subscribe((res)=>{
+      console.log("the profile data is "+JSON.stringify(res));
+      this.users=res
+    })
    
 
 
@@ -136,9 +142,15 @@ const totalAmount = selectedItems.reduce((total, cartItem) => {
 }, 0);
 
 this.amount = totalAmount - (totalAmount * (this.discount / 100)) + 40;
-// console.log("the final amount is " + this.amount);
+
+
+
+
+
+
 
 const orderData = {
+  userDetails:this.users,
   orderID: orderID,
   totalAmount: this.amount,
   selectedItems: selectedItems,

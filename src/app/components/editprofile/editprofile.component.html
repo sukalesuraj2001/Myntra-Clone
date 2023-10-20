@@ -1,80 +1,73 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 mx-auto">
-            <form class="example-form mt-5" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
+        <div class="col-md-6 mx-auto">
+            <form class="example-form mt-4 p-4" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
+                <h2 class="text-center mb-4">Edit Your Myntra Profile</h2>
+                
+                <!-- Myntra Logo -->
+                <div class="text-center">
+                    <img src="https://entrackr.com/storage/2021/01/myntra-1-800x400.jpg" alt="Myntra Logo" style="width: 100px;">
+                </div>
 
-                <h2>Edit Your Profile</h2>
-                <mat-form-field class="example-full-width mt-5">
-                    <mat-label>Company</mat-label>
-                    <input matInput disabled value="Myntra">
-                </mat-form-field>
-
-                <table class="example-full-width" cellspacing="0">
-                    <tr>
-
-                        <td><mat-form-field class="example-full-width">
-                                <mat-label>First name</mat-label>
-                                <input formControlName="firstName" matInput>
-                            </mat-form-field></td>
-                        <td><mat-form-field class="example-full-width">
-                                <mat-label> Last Name </mat-label>
-                                <input formControlName="lastName" matInput>
-                            </mat-form-field></td>
-
-                    </tr>
-                </table>
-                <p>
-                    <td><mat-form-field class="example-full-width">
-                            <mat-label>Mobile Number</mat-label>
-                            <input formControlName="mobileNumber" matInput>
-                        </mat-form-field></td>
-                    <td><mat-form-field class="example-full-width">
-                            <mat-label>Email Id</mat-label>
-                            <input formControlName="email" matInput>
-                        </mat-form-field></td>
-
-                </p>
-
-                <p>
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Address</mat-label>
-                        <textarea formControlName="address1" matInput placeholder="Ex. 100 Main St"></textarea>
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Address 2</mat-label>
-                        <textarea formControlName="address2" matInput></textarea>
-                    </mat-form-field>
-                </p>
-
-                <table class="example-full-width" cellspacing="0">
-                    <tr>
-                        <td><mat-form-field class="example-full-width">
-                                <mat-label>City</mat-label>
-                                <input formControlName="city" matInput placeholder="Ex. San Francisco">
-                            </mat-form-field></td>
-                        <td><mat-form-field class="example-full-width">
-                                <mat-label>State</mat-label>
-                                <input formControlName="state" matInput placeholder="Ex. California">
-                            </mat-form-field></td><br>
-
-
-                    </tr>
-                    <tr>
-                        <div class="mb-3">
-                            <label for="productImage" class="form-label">Product Image</label>
-                            <input type="file" formControlName="image" class="form-control" id="productImage"
-                                accept="image/*" required="image">
+                <!-- Myntra Banner (you can use an image or customize it as needed) -->
+              
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" formControlName="firstName">
                         </div>
-                    </tr>
-
-
-
-                </table>
-
-                <p><button mat-raised-button color="primary">Submit</button></p>
-
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number</label>
+                            <input type="text" id="mobileNumber" class="form-control" formControlName="mobileNumber">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email Id</label>
+                            <input type="email" id="email" class="form-control" formControlName="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address1">Address</label>
+                    <textarea id="address1" class="form-control" formControlName="address1" placeholder="Ex. 100 Main St"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address 2</label>
+                    <textarea id="address2" class="form-control" formControlName="address2"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control" formControlName="city" placeholder="Ex. San Francisco">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" class="form-control" formControlName="state" placeholder="Ex. California">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Profile Image</label>
+                    <input type="file" id="productImage" class="form-control" formControlName="image" accept="image/*" required="image">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-4">Save Changes</button>
             </form>
-
         </div>
     </div>
 </div>

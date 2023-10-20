@@ -8,6 +8,7 @@ import { Profile } from '../product_data/profileData';
   providedIn: 'root',
 })
 export class AuthService {
+ 
   private apiUrl = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
   // user login and registration Api start
@@ -30,6 +31,20 @@ export class AuthService {
   getProfile(userdata: Profile): Observable<Profile[]> {
     const x = localStorage.getItem('userId');
     return this.http.get<Profile[]>(`${this.apiUrl}/Profile?id=${x}`);
+  }
+
+
+
+  getProfiles(): Observable<Profile[]> {
+    const x = localStorage.getItem('userId');
+    return this.http.get<Profile[]>(`${this.apiUrl}/Profile?id=${x}`);
+  }
+
+
+  updateProfile(profileData: Profile): Observable<Profile> {
+    // Implement your logic to send a PUT request to update the user's profile
+    const userId = localStorage.getItem('userId');
+    return this.http.put<Profile>(`${this.apiUrl}/profile/${userId}`, profileData);
   }
    // userProfile end
 }

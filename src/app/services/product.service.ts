@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Product } from '../product_data/product';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -46,4 +46,6 @@ export class ProductService {
   getProductById(id: string) {
     return this.http.get(`${this.apiUrl}/Product/${id}`);
   }
+
+  
 }

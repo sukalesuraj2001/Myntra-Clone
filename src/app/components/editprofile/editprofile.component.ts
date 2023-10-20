@@ -10,8 +10,20 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent {
+firstName:string=""
+
+
+
+
 constructor(private auth:AuthService,private router:Router){}
 
+
+ngOnInit(): void {
+
+  this.auth.getProfiles().subscribe((res:any)=>{
+this.firstName=res
+  })
+}
   namectrl = new FormControl('');
   
 

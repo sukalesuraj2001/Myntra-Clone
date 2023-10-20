@@ -28,6 +28,8 @@ import { SellerService } from 'src/app/services/seller.service';
 })
 export class NavbarComponent {
   // const seller=localStorage.getItem("seller")
+  searchQuery:string=""
+  searchResult:Product[]=[]
   counter = 0;
   search = '';
   cartcount = 0;
@@ -43,6 +45,7 @@ export class NavbarComponent {
     private sellerService: SellerService,
     private cartService: CartService
   ) {}
+
   ngOnInit(data: Cart): void {
     this.count = this.ps2.sub;
     this.search = localStorage.getItem('userName') ?? '';
@@ -57,6 +60,20 @@ export class NavbarComponent {
       }
     });
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   getCartCount() {}
 

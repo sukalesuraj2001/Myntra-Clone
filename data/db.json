@@ -987,8 +987,8 @@
       "category": "Ethentic Wear",
       "price": 535,
       "totalprice": 535,
-      "image": "https://m.media-amazon.com/images/I/51U5Ac53H8L._UX569_.jpg",
-      "image1": "https://m.media-amazon.com/images/I/41Hq-9Ntf0L._UX569_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41Hq-9Ntf0L._UX569_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/51U5Ac53H8L._UX569_.jpg",
       "image2": "https://m.media-amazon.com/images/I/417B-NaabmL._UX569_.jpg",
       "image3": "https://m.media-amazon.com/images/I/51EBlHAzvKL._UX569_.jpg",
       "image4": "https://m.media-amazon.com/images/I/419lgBFMyBL._UX569_.jpg",
@@ -1149,34 +1149,23 @@
   ],
   "Order": [
     {
-      "orderID": 8060,
-      "totalAmount": 638.8,
-      "selectedItems": [
+      "userDetails": [
         {
-          "productName": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
-          "description": "FIORRA Women's Maroon Poly Crepe A-line Kurta with Pant and Dupatta",
-          "category": "Ethentic Wear",
-          "price": 499,
-          "totalprice": 499,
-          "image": "https://m.media-amazon.com/images/I/81271aov+AL._UY741_.jpg",
-          "image1": "https://m.media-amazon.com/images/I/7112Hciv9TL._UY741_.jpg",
-          "image2": "https://m.media-amazon.com/images/I/71dTmfGFcxL._UY741_.jpg",
-          "image3": "https://m.media-amazon.com/images/I/61ruH8kG7QL._UY741_.jpg",
-          "image4": "https://m.media-amazon.com/images/I/81-SE6wtbNL._UY741_.jpg",
-          "qty": 2,
-          "rating": 3.2,
-          "sellerId": "1",
-          "id": 44,
-          "size": 38,
+          "firstName": "Jhon",
+          "lastName": "Anderson",
+          "email": "jhon@gmail.com",
+          "mobileNumber": "9112768829",
+          "address1": "Balaji Heights Rajaram Nagar Kharadi Pune 411011",
+          "address2": "Balaji Heights Rajaram Nagar Kharadi Pune 411011",
+          "city": "Pune City",
+          "state": "Maharashtra",
+          "image": "/assets/user.png",
           "userId": "2",
-          "selected": true
+          "id": 2
         }
       ],
-      "id": 1
-    },
-    {
-      "orderID": 9786,
-      "totalAmount": 399.4,
+      "orderID": 1491,
+      "totalAmount": 579.1,
       "selectedItems": [
         {
           "productName": "ANNI DESIGNER Women Kurta with Pant & Dupatta",
@@ -1198,7 +1187,7 @@
           "selected": true
         }
       ],
-      "id": 2
+      "id": 1
     }
   ],
   "Banner": [
@@ -1322,6 +1311,74 @@
       "rating": 3.5,
       "sellerId": "1",
       "id": 42,
+      "userId": "2"
+    },
+    {
+      "productName": "REDUX RWS0014S Analogue Black Dial Man's & Boy's Watch",
+      "description": "REDUX RWS0014S Analogue Black Dial Man's & Boy's Watch",
+      "category": "Watches",
+      "price": 190,
+      "totalprice": 190,
+      "image": "https://m.media-amazon.com/images/I/71Gc3CnC20L._UY500_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/61z6OLe-GVL._UX342_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/81cotxwMMnL._UX342_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/71Gc3CnC20L._UY500_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/61z6OLe-GVL._UX342_.jpg",
+      "qty": 1,
+      "rating": 3.6,
+      "sellerId": "1",
+      "id": 57,
+      "userId": "2"
+    },
+    {
+      "productName": " Click to open expanded view Fire-Boltt Ninja 3 Plus 1.83\" Display Smartwatch",
+      "description": "Fire-Boltt Ninja 3 Plus 1.83\" Display Smartwatch Full Touch with 100+ Sports Modes with IP68, Sp02 Tracking, Over 100 Cloud Based Watch Faces (Beige)",
+      "category": "Watches",
+      "price": 999,
+      "totalprice": 999,
+      "image": "https://m.media-amazon.com/images/I/61TlgEodcGL._SX466_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/81giOuHfLSL._SX466_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/616C1AarzDL._SX466_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/614BtPOEPJL._SX466_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/61W6YnjGMlL._SX466_.jpg",
+      "qty": 1,
+      "rating": 4.1,
+      "sellerId": "1",
+      "id": 59,
+      "userId": "2"
+    },
+    {
+      "productName": "Fire-Boltt Phoenix Pro 1.39\" Bluetooth Calling Smartwatch",
+      "description": "\nFire-Boltt Phoenix Pro 1.39\" Bluetooth Calling Smartwatch, AI Voice Assistant, Metal Body with 120+ Sports Modes, SpO2, Heart Rate Monitoring (Gold Pink)",
+      "category": "Watches",
+      "price": 1399,
+      "totalprice": 1399,
+      "image": "https://m.media-amazon.com/images/I/71Yro+y7CQL._SX679_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/71c3edXmCCL._SY450_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/617BkpiSeuL._SY450_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/71tY8w8g9OL._SY450_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/71+IFNuqgQL._SY450_.jpg",
+      "qty": 1,
+      "rating": 4.2,
+      "sellerId": "1",
+      "id": 61,
+      "userId": "2"
+    },
+    {
+      "productName": " Click to open expanded view Visit the REDUX Store Redux Analog Blue-Grey Dial Men's Watch",
+      "description": "\nClick to open expanded view\nVisit the REDUX Store\nRedux Analog Blue-Grey Dial Men's Watch",
+      "category": "Watches",
+      "price": 275,
+      "totalprice": 275,
+      "image": "https://m.media-amazon.com/images/I/718XDEWTPIL._UY445_.jpg",
+      "image1": "https://m.media-amazon.com/images/I/71faA5CSvyL._UX342_.jpg",
+      "image2": "https://m.media-amazon.com/images/I/71w1FTFkOSL._UX342_.jpg",
+      "image3": "https://m.media-amazon.com/images/I/715rQ43eoAL._UX342_.jpg",
+      "image4": "https://m.media-amazon.com/images/I/71iUEj1Nd5L._UX425_.jpg",
+      "qty": 1,
+      "rating": 3.6,
+      "sellerId": "1",
+      "id": 58,
       "userId": "2"
     }
   ]

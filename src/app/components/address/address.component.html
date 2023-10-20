@@ -68,90 +68,109 @@
 
 
 
-  <hr>
-  <div class="container container-with-space">
-    <div class="row">
-      <div class="col-md-8  content">
-        <div class="customer address">
-          <p class="fw-bold" >Select Delivery Address </p>
-          <p class="default">DEFAULT ADDRESS</p>
-         
-        </div>
-        <div class="customer mt-1 shadow-sm p-3 mb-5 bg-body-white rounded">
-          <mat-radio-group class="side-by-side">
-            <mat-radio-button class="example-margin" value="after"></mat-radio-button>
-            <p class="fw-bold">{{username | titlecase}}</p>
-          </mat-radio-group>
-          
-          <p class="ms-5" >{{address}}</p>
-          <p class="ms-5" >Mobile: {{mobileNo}}</p>
-          <p class="ms-5"><li>Pay On Delivery available</li></p>
-          <div class="container mt-3">
-            <button class="ms-4"  mat-raised-button>Remove</button>
+<hr>
+<div class="container container-with-space">
+  <div class="row">
+    <div class="col-md-8  content">
+      <div class="customer address">
+        <p class="fw-bold">Select Delivery Address </p>
+        <p class="default">DEFAULT ADDRESS</p>
 
-          
-            <div >
-             
+      </div>
+      <div class="customer mt-1 shadow-sm p-3 mb-5 bg-body-white rounded">
+        <mat-radio-group class="side-by-side">
+          <mat-radio-button class="example-margin" value="after"></mat-radio-button>
+          <p class="fw-bold">{{username | titlecase}}</p>
+        </mat-radio-group>
+
+        <p class="ms-5">{{address}}</p>
+        <p class="ms-5">Mobile: {{mobileNo}}</p>
+        <p class="ms-5">
+          <li>Pay On Delivery available</li>
+        </p>
+        <div class="container mt-3">
+          <button class="ms-4" mat-raised-button>Remove</button>
+
+
+          <div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="product-details my-2">
+        <div class="customer-address ">
+
+          <div class="container-address">
+            <p type="button" class="text-danger" (click)="toggleCollapse()">Add New Address</p>
+            <div [ngClass]="{'collapse': isCollapsed, 'show': !isCollapsed}">
+              <form>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+
+                <button type="submit">Save Address</button>
+              </form>
             </div>
           </div>
+
         </div>
-        
-        <div class="product-details my-2" >
-          <div class="img ">
-         
-  
-  
-  
-            <img src="#" class="img-thumbnail ms-1 mb-3" alt="...">
+        <div class="product-detail mt-4 ms-3">
+          <p class="fw-bold"></p>
+          <p></p>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="product-detail me-3">
+          <span><i class="bi bi-x"></i></span>
+        </div>
+      </div> -->
+
+
+
+
+    </div>
+    <div class="col-md-4 ">
+     <div class="estimate">
+      <p class="mt-3">DELIVERY ESTIMATES</p>
+     </div>
+      <div class="coupon-container">
+        <div class="coupon-section">
+          <div class="d-flex align-items-center">
+           <img [src]="productImage" alt="">
+            <p> Estimated delivery by &nbsp;  <b>{{productName | date: 'd MMM , y'}}</b></p><br>
           </div>
-          <div class="product-detail mt-4 ms-3">
-            <p class="fw-bold"></p>
-            <p></p>
-  
-          
-  
-  
-  
-  
-  
-        
-            <!-- <p>Total Price: {{ item.totalprice*item.qty | currency :"INR" }}</p> -->
-          </div>
-          <div class="product-detail me-3">
-            <span ><i class="bi bi-x"></i></span>
+          <div class="price-details mt-5">
+            <p class="fw-bold">Price Details({{counter}}items)</p>
+            <p>Total MRP: <b>{{totalprice |currency:"INR" }}</b> </p>
+            <p>Discount On MRP: <b>{{totalprice*(discount/100) |currency:"INR"}}</b> </p>
+            <p>Shipping : <b>{{shipping | currency:"INR"}}</b> </p>
+            <p>Total Amount: <b>{{(totalprice -(totalprice*discount/100))+shipping | currency:"INR"}}</b> </p>
           </div>
         </div>
-  
-  
-  
-  
+        <!-- {{(totalmrp -(totalmrp*(discount/100)) + shipping) | currency: "INR"}} -->
       </div>
-      <div class="col-md-4 ">
-        <h5 class="mt-3">Coupon</h5>
-        <div class="coupon-container">
-          <div class="coupon-section">
-            <div class="d-flex align-items-center">
-              <p class="mt-1">
-                <span class="me-3 mt-1"><i class="bi bi-tag mt-3"></i></span>
-  
-              </p>
-              <p>Apply Coupon</p>
-            </div>
-          </div>
-          <div class="apply-btn">
-            <button type="submit" class="btn ">APPLY</button>
-          </div>
-        </div>
-        <hr>
-        <div class="price-details">
-          <p class="fw-bold">PRICE DETAILS(1 item)</p>
-         
-  
-  
-        </div>
-        <button type="submit" id="btn" >PLACE ORDER</button>
-      </div>
-  
-  
+ 
+      
+      
+      <button type="submit" id="btn" class="mt-2">PLACE ORDER</button>
     </div>
   </div>
+</div>

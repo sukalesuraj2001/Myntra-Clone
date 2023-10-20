@@ -33,5 +33,10 @@ export class PlaceOrderService {
     return this.http.post(`${this.apiUrl}/Order`, data);
   }
   
+  getOrder(){
+    const x=localStorage.getItem("userId")
+    return this.http.get(`${this.apiUrl}/Order?userId=${x}`);
+
+  }
 
 }

@@ -12,12 +12,16 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent {
+  isWishlistClicked: boolean = false;
+
   selectedSize:number=0
+  addressResult:any
   products: Product[] = [];
   constructor(private ps1: ProductService, private route: ActivatedRoute,private router:Router,private cartService:CartService,private ps:ProductsServicesService,private cart:CartService) {}
   id!: string | null;
   result: any
   ethentic:Product[]=[]
+  currentDate: Date | null = null;
 
   coupon:string=""
 
@@ -31,6 +35,12 @@ export class ProductDetailsComponent {
 
 
 
+    // this.currentDate = new Date();  
+    // const randomDays = Math.floor(Math.random() * 8) + 1; 
+    // this.currentDate.setDate(this.currentDate.getDate() + randomDays);  
+     
+    
+    
 
     this.route.paramMap.subscribe(data => {
       this.id = data.get('id');
@@ -134,13 +144,54 @@ wishlist(result:Product){
   // alert("click on wishlist")
   // console.log("the wishlist are"+JSON.stringify(result));
   result.userId=localStorage.getItem("userId")?? ""
-  this.cart.getWishlist(result).subscribe(()=>{
+  this.cart.getWishlist(result)
+  .subscribe(()=>{
   
     alert('Added to WishList')
 
+  setTimeout(() => {
     this.router.navigate(['/wishlist'])
+  }, 100);
   })
+  this.isWishlistClicked = !this.isWishlistClicked;
   
+}
+
+
+
+
+
+
+// Initialize currentDate to null
+
+
+lookupLocation() {
+  const locationInput = document.getElementById("locationInput") as HTMLInputElement | null;
+  const addressResult = document.getElementById("addressResult") as HTMLElement | null;
+
+  if (locationInput && addressResult) {
+    const location = locationInput.value;
+    const apiUrl = `https://nominatim.openstreetmap.org/search?q=${location}&format=json`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data.length > 0) {
+          const address = data[0].display_name;
+          this.addressResult = "Address: " + address;
+
+          // Update currentDate when you have a valid address
+          this.currentDate = new Date();  
+          const randomDays = Math.floor(Math.random() * 8) + 1; 
+          this.currentDate.setDate(this.currentDate.getDate() + randomDays);
+          sessionStorage.setItem("date",JSON.stringify(this.currentDate))
+        } else {
+          this.addressResult = "Address not found for the given location";
+          // Set currentDate to null when the address is not found
+          this.currentDate = null;
+        }
+      });
+  }
 }
 
 

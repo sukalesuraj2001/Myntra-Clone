@@ -1,117 +1,107 @@
-<!-- 
-<div class="container-fluid mt-5">
- 
-    <div class="row mt-3">
-        <div *ngFor="let x of ethentic" class="col-md-2 mb-4">
-
-            <mat-card class="example-card">
-
-                <img class="pimage" mat-card-image src="{{x.image}}" alt="Product Image">
-                <mat-card-content>
-                    <p>{{x.productName}} </p>
-                    <p>{{x.price | currency:"INR"}} </p>
-
-                    <app-rating [rate]="x.rating"></app-rating>
-
-                    <button  mat-raised-button color="primary" (click)="addToCart(x)">Add To Cart</button>
-
-
-                </mat-card-content>
-            </mat-card>
 
 
 
+
+
+
+
+
+
+<div class="apparel">
+    <h4 class="apperal ms-4">Apparel :{{counter}} Items</h4>
+
+</div>
+<div class="container-fluid">
+    <div class="filter">
+        <div class="button">
+            <p>FILTERS </p>
+            <p class="clear" (click)="clearAll()">CLEAR ALL</p>
+        </div>
+        <hr> 
+
+        <div class="form-check mt-3 ms-3">
+            <input class="form-check-input mt-1" type="radio" name="flexRadioDefault" id="men">
+            <label class="form-check-label fw-medium" for="men">
+                Mens
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" name="flexRadioDefault" id="women">
+            <label class="form-check-label fw-medium" for="women">
+                Women
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" name="flexRadioDefault" id="boys">
+            <label class="form-check-label fw-medium" for="boys">
+                Boys
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" name="flexRadioDefault" id="girls">
+            <label class="form-check-label fw-medium" for="girls">
+                Girls
+            </label>
+        </div>
+        <hr>
+        <p class="fw-medium">CATEGORIES</p>
+        <div class="form-check ms-3">
+            <input class="form-check-input mt-1" (click)="Ethentic()" type="radio" name="wearType" id="ethentic">
+            <label class="form-check-label fw-medium" for="ethentic">
+                Ethentic Wear
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Casual()" name="wearType" id="casual">
+            <label class="form-check-label fw-medium" for="casual">
+                Casual Wear
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Activemens()" name="wearType" id="active">
+            <label class="form-check-label fw-medium" for="active">
+                Active Wear-Mens
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Western()" name="wearType" id="western">
+            <label class="form-check-label fw-medium" for="western">
+                Western Wear
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Sport()" name="wearType" id="sport">
+            <label class="form-check-label fw-medium" for="sport">
+                Sport Wear
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Long()" name="wearType" id="long">
+            <label class="form-check-label fw-medium" for="long">
+                Long Wear
+            </label><br>
+            <input class="form-check-input mt-1" type="radio" (click)="Watches()" name="wearType" id="watches">
+            <label class="form-check-label fw-medium" for="watches">
+                Watches
+            </label>
+        </div>
+        <hr>
+        <div class="form-check  mt-3">
+            <p class=" price fw-medium">PRICE</p>
+            <div class="under mt-3">
+                <input class="form-check-input mt-1" (click)="underMin()" type="radio" name="wearType" id="300">
+                <label class="form-check-label fw-medium" for="300">
+                    Under 300
+                </label>
+            </div>
+            <div class="bet">
+                <input class="form-check-input mt-1" (click)="between()" type="radio" name="wearType" id="300 to 800">
+                <label class="form-check-label fw-medium" for="300 to 800">
+                    Rs.300 to Rs.800
+                </label>
+            </div>
+            <div class="max">
+                <input class="form-check-input mt-1" (click)="above()" type="radio" name="wearType" id="max">
+                <label class="form-check-label fw-medium" for="max">
+                    Above 900
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="products">
+        <!-- Product cards (repeat this block for each product) -->
+        <div class="product-card shadow-sm p-3 mb-5 bg-body-white rounded" *ngFor="let x of ethentic"
+            [routerLink]="['/Product', x.id]">
+            <img src="{{x.image}}" alt="{{x.productName}}">
+            <p class="name mt-2 ">{{x.productName | slice:0:6}}</p>
+            <p class="desc">{{x.description | slice: 0:20}}..</p>
+            <p class="amount"> Rs.{{x.price | number:'1.2-2'}}</p>
         </div>
     </div>
-</div>  -->
-
-
-
-
-
-
-
-<!-- <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 ">
-
-
-        </div>
-    </div> -->
-
-
-
-
-    <!-- <div class="row">
-        <h3 class="mt-5 ">FILTERS</h3>
-        <div id="filters" class="col-md-2 mt-2">
-            <div class="form-check mt-3 ms-3">
-                <input class="form-check-input     " type="radio" name="flexRadioDefault" id="men">
-                <label class="form-check-label  fw-bold " for="men">
-                    Mens
-                </label><br>
-                <input class="form-check-input " type="radio" name="flexRadioDefault" id="women">
-                <label class="form-check-label fw-bold " for="women">
-                    Women
-                </label><br>
-                <input class="form-check-input " type="radio" name="flexRadioDefault" id="boys">
-                <label class="form-check-label  fw-bold " for="boys">
-                    Boys
-                </label><br>
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="girls">
-                <label class="form-check-label fw-bold " for="girls">
-                    Girls
-                </label>
-            </div>
-            <hr>
-            <h3 class="#">CATEGORIES</h3>
-            <div class="form-check ms-3">
-                <input class="form-check-input" type="checkbox" value="" id="ethentic">
-                <label class="form-check-label" for="ethentic">
-                    Ethentic 
-                </label><br>
-                 <input class="form-check-input" type="checkbox" value="" id="casual">
-                <label class="form-check-label" for="Casual">
-                   Casual
-                </label>
-            </div>
-        </div>
-        <div class="col-md-9 mt-3">
-
-            <div class="row">
-                <div class="col-md-3 mt-3 " *ngFor="let x of ethentic" [routerLink]="['/Product', x.id]">
-                    <div class="card-fluid">
-                        <img src="{{x.image}}" class="card-img-top ">
-                        <div class="card-body">
-                            <h5 class="card-title">{{x.productName}}</h5>
-                            <p class="desc">{{x.description}}</p>
-                            <p class="fw-bold">{{x.price | currency:"INR"}}</p>
-
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
- <div class="container-fluid">
-        <h5 class="mt-3">Appariel: {{counter}} items</h5>
-        <div class="row mt-4">
-            <div class="col-md-3 mt-3" *ngFor="let x of ethentic"  [routerLink]="['/Product', x.id]">
-                <div class="card-fluid shadow-sm p-3 mb-5 bg-body rounded">
-                    <img src="{{x.image}}" class="card-img-top   ">
-                    <div class="card-body">
-                        <h5 class="card-title mt-1">{{x.productName}}</h5>
-                        <p class="desc">{{x.description}}</p>
-                        <p class="fw-bold">Rs.{{x.price}}</p>
-
-                      
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
+</div>

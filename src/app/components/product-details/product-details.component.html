@@ -5,7 +5,8 @@
             <!-- First div: Contains six images arranged in two rows -->
             <div class="row mt-3">
                 <div class="col-6 mb-2">
-                    <img [src]="result.image" alt="Product Image" class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <img [src]="result.image" alt="Product Image"
+                        class="img-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
 
                 </div>
                 <div class="col-6 mb-2">
@@ -31,14 +32,14 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h3 class="mt-5">{{result.productName}}</h3>
+            <h3 class=" desc mt-5">{{result.productName}}</h3>
             <p class="text">{{result.description}}</p>
 
-            <p class="text fw-bold">{{result.price | currency:"INR"}}</p>
+            <h5 class="text-price fw-bold">{{result.price | currency:"INR"}}</h5>
 
             <p class="text-success fw-bold">inclusive of all taxes</p>
 
-            <p>Size Chart</p>
+            <p class="fw-medium">SELECT SIZE</p>
             <div class="size-chart">
                 <span (click)="selectSize(38)">38</span>
                 <span (click)="selectSize(40)">40</span>
@@ -47,36 +48,70 @@
                 <span (click)="selectSize(44)">44</span>
                 <span (click)="selectSize(46)">46</span>
             </div>
-            
+
             <div class="row">
                 <div class="col-4 mt-5">
-                  <a href="#" class="btn myntra-button" (click)="addToCart(result)">
-                    <span class="me-3"><i class="bi bi-bag"></i></span>ADD TO BAG
-                  </a>
+                    <a href="#" class="btn myntra-button" (click)="addToCart(result)">
+                        <span class="me-3"><i class="bi bi-bag"></i></span>ADD TO BAG
+                    </a>
                 </div>
                 <div class="col-4 mt-5">
-                  <a id="whishlist" href="#" class="btn myntra-button bg-white text-dark" routerLink="/wishlist" (click)="wishlist(result)">
-                    <span class="me-3" ><i class="bi bi-heart "></i></span>WHSHLIST
-                  </a>
+                    <a id="whishlist" href="#" class="btn myntra-button bg-white text-dark" 
+                        (click)="wishlist(result)">
+                        <span class="me-3"><i class="bi bi-heart "></i></span>WHSHLIST
+                    </a>
                 </div>
-              </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="delivery-option mt-3">
+                <p class="fw-medium">DELIVERY OPTIONS &nbsp;<i class="bi bi-truck"></i></p>
+                <div class="search-container">
+                  <input type="text" id="locationInput" placeholder="PINCODE">
+                  <i class="bi bi-search search-icon" (click)="lookupLocation()"></i>
+                </div>
               
-              <div class="delivery-option mt-5">
-                <p>DELIVERY OPTIONS &nbsp;<i class="bi bi-truck"></i></p>
-                <input type="text" placeholder="Enter Pincode">
-                <p class="text-delivery">Please Enter the pincode to check delivery time & pay on delivery availabilty</p>
+                <ng-container *ngIf="addressResult !== ''; else elseTemplate">
+                  <p id="addressResult" class="fw-medium">{{ addressResult }}</p>
+                  <!-- Only display the "Get it by" date if currentDate is not null -->
+               
+                  <div class="delivery-estimate mt-3">
+                    <p id="addressResult" class="fw-medium" *ngIf="currentDate">Get it by {{ currentDate | date: 'EEEE, MMMM d, y' }}</p>
+
+
+
+                    
+                    <p>Pay On Delivery Available</p>
+                    <p>Easy 14 days return & exchange available</p>
+                    
+                
+                </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <p class="text-delivery">Please Enter the pincode to check delivery time & pay on delivery availability</p>
+                </ng-template>
               </div>
-              <div class="speciality mt-4">
+           
+
+
+            <div class="speciality mt-4">
                 <p>100% Original Products</p>
                 <p>Pay on delivery might be available</p>
                 <p>Easy 14 days return and exchange</p>
                 <p>Try and Buy might be available</p>
-              </div>
+            </div>
 
-              <div class="offers">
+            <div class="offers">
                 <p>Best Price : <b class="best-price fw-bold">Rs {{result.price}}</b> </p>
                 <p>Applicable on: Orders above Rs. 1299 (only on first purchase)</p>
-                <p>Coupon code: <a href="#" class="fw-bold text-decoration-none text-dark">{{coupon |uppercase}}</a> </p>
+                <p>Coupon code: <a href="#" class="fw-bold text-decoration-none text-dark">{{coupon |uppercase}}</a>
+                </p>
                 <p>Coupon Discount: Rs. 288 off (check cart for final savings)</p>
                 <p class="fw-bold">10% Instant Discount on ICICI Bank Credit and Debit Card</p>
                 <small>Min Spend ₹3,500, Max Discount ₹1,200.
@@ -84,7 +119,7 @@
                 <p class="fw-bold mt-2">EMI options available</p>
                 <p>EMI starting from Rs.53/month
                 </p>
-              </div>
+            </div>
         </div>
     </div>
 
@@ -101,7 +136,7 @@
                     <img src="{{x.image}}" class="card-img-top   ">
                     <div class="card-body">
                         <h5 class="card-title mt-4">{{x.productName}}</h5>
-                        <p>{{x.description}}</p>
+                        <p id="desc">{{x.description}}</p>
                         <p class="fw-bold">{{x.price | currency:"INR"}}</p>
 
                         <app-rating [rate]="x.rating"></app-rating>

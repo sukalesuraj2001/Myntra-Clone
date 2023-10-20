@@ -37,6 +37,8 @@ export class ProductsComponent {
       this.products = res;
       // console.log("category called"+JSON.stringify(res));
     });
+
+   
   }
 
   userId() {
