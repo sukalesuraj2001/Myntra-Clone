@@ -9,6 +9,9 @@ export class Profile {
   image: string | null = null;
   state: string | null = null;
   city: string | null = null;
+  id:number=0
+  userdata:object={}
+  
 
   // Add other properties as needed
 }

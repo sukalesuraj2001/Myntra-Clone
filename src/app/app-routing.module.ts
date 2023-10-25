@@ -17,6 +17,9 @@ import { OrderComponent } from './components/order/order.component';
 import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { AddressComponent } from './components/address/address.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
 
 
 const routes: Routes = [
@@ -82,9 +85,19 @@ const routes: Routes = [
     title: 'Myntra | Wishlist',
   },
   {
-    path: 'address',
+    path: 'payment',
+    component: PaymentComponent,
+    title: 'Myntra |payment',
+  },
+  {
+    path: 'address', 
     component: AddressComponent,
     title: 'Myntra | Address',
+  },
+  {
+    path: '**',
+    component: NotfoundComponent,
+    title: 'Myntra | Page Not Found',
   }, 
 ];
 

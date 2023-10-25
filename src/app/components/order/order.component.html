@@ -1,47 +1,22 @@
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-md-9">
-        <div *ngFor="let customer of profile" class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <h3>Customer Information</h3>
-          <p>Name: {{customer.firstName + " " + customer.lastName}}</p>
-          <p>Email: {{customer.email}}</p>
-          <p>Address: {{customer.address1}}</p>
-        </div>
-  
-        <div *ngFor="let product of products" class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <div class="row">
-            <div class="col-md-4">
-              <img [src]="product.image" alt="...">
-            </div>
-            <div class="col-md-8" *ngFor="let x of products">
-                <p><strong>Product Name:</strong></p>
-                <p>{{x.id}}</p>
-                <p>{{x.productName}}</p>
-                <p> Quantity:{{x.qty}}</p>
-                <p>Category:{{x.category}}</p>
-    
-                <p><strong> Price:{{x.totalprice | currency:"INR"}}:</strong></p>
-                <!-- Add product details here -->
-    
-                <a class="text-decoration-none text-dark">
-                  <button type="submit" class="btn btn-danger mt-4" (click)="removeProduct(x.id)"  >Remove</button>
-                </a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <h3>Price Details</h3>
-          <br>
-          <h5>Items:</h5>
-          <!-- Add item details here -->
-          <a href="#">
-            <button class="btn btn-warning mt-2" (click)="makePayment(products)">Make Payment</button>
-          </a>
-        </div>
-      </div>
-    </div>
+<header>
+  <div class="header-content">
+      <h1>Your Orders</h1>
+      <!-- Add your user profile image here -->
+      <img src="profile.jpg" alt="User Profile">
   </div>
-  
+</header>
+
+<main>
+  <div class="order-card">
+      <img src="product1.jpg" alt="Product 1">
+      <div class="order-details">
+          <h2>Product Name</h2>
+          <p>Order Date: September 1, 2023</p>
+          <p>Order Status: Shipped</p>
+          <p>Order Total: $50.00</p>
+          <button>Track Order</button>
+      </div>
+  </div>
+
+  <!-- Add more order cards here for each order -->
+</main>

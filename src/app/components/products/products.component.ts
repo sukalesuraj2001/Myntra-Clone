@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cat } from 'src/app/product_data/cat';
+import { Order } from 'src/app/product_data/order';
 import { Product } from 'src/app/product_data/product';
 import { CartService } from 'src/app/services/cart.service';
+import { PlaceOrderService } from 'src/app/services/place-order.service';
 import { ProductService } from 'src/app/services/product.service';
 import { SlidersService } from 'src/app/services/sliders.service';
 
@@ -17,7 +19,9 @@ export class ProductsComponent {
     private ps1: ProductService,
     private cartService: CartService,
     private router: Router,
-    private slider: SlidersService
+    private slider: SlidersService,
+    private order:PlaceOrderService,
+
   ) {}
 
   products: Product[] = [];
@@ -25,11 +29,18 @@ export class ProductsComponent {
   cat: Cat[] = [];
 
   category = 'CATEGORY SPECIALS';
-  ngOnInit(): void {
+  ngOnInit(item:Order): void {
     this.slider.getSlider1().subscribe((res: any) => {
       this.slide = res;
       // console.log("the silders are"+JSON.stringify(res));
     });
+
+
+    
+   
+    
+
+
 
     sessionStorage.removeItem('cat');
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import items from 'razorpay/dist/types/items';
 import { Cart } from 'src/app/product_data/cart';
+import { Order } from 'src/app/product_data/order';
 import { Product } from 'src/app/product_data/product';
 import { Profile } from 'src/app/product_data/profileData';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,7 +16,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-
+  date:any
   selectedQuantity:number=0;
  discount=10;
  shipping=40;
@@ -36,7 +37,9 @@ address:any;
   constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService,private auth:AuthService) {}
 
 ngOnInit(cartdata:Cart): void {
+  
 
+  this.date=sessionStorage.getItem("date")?? "";
     // discount on price
 
     this.auth.getProfile(new Profile).subscribe((res)=>{
@@ -129,43 +132,37 @@ selectQuantity(quantity: number) {
 // place order functionality
 
 placeOrder() {
-  // Generate a 4-digit random order ID
-const orderID = Math.floor(1000 + Math.random() * 9000);
+  const selectedItems = this.cartItems.filter(cartItem => cartItem.selected);
 
-// Your existing code for handling the selected item here.
-const selectedItems = this.cartItems.filter(cartItem => cartItem.selected);
+  // Check if there are selected items in the cart
+  if (selectedItems.length === 0) {
+    alert("Please select products in the cart before placing an order.");
+    return; 
+  }
 
-const totalAmount = selectedItems.reduce((total, cartItem) => {
-  const totalItemPrice = cartItem.totalprice * cartItem.qty;
-  // console.log("total amt is " + totalItemPrice);
-  return total + totalItemPrice;
-}, 0);
+  const orderID = Math.floor(1000 + Math.random() * 9000);
 
-this.amount = totalAmount - (totalAmount * (this.discount / 100)) + 40;
+  const totalAmount = selectedItems.reduce((total, cartItem) => {
+    const totalItemPrice = cartItem.totalprice * cartItem.qty;
+    return total + totalItemPrice;
+  }, 0);
 
+  this.amount = totalAmount - (totalAmount * (this.discount / 100)) + 40;
 
+  const orderData = {
+    purchaseDate: this.date,
+    userDetails: this.users,
+    orderID: orderID,
+    totalAmount: this.amount,
+    selectedItems: selectedItems,
+  };
 
-
-
-
-
-const orderData = {
-  userDetails:this.users,
-  orderID: orderID,
-  totalAmount: this.amount,
-  selectedItems: selectedItems,
-};
-
-// console.log("the checkout price is " + JSON.stringify(orderData));
-
-this.orderservice.orderProduct(orderData).subscribe(() => {
-  alert("Order placed successfully!");
-});
-
-  // this.orderservice.orderProduct().subscribe(() => {
-  //   alert("Product placed successfully");
-  // });
+  this.orderservice.orderProduct(orderData).subscribe(() => {
+    alert("Order placed successfully!");
+    this.router.navigate(['/address'])
+  });
 }
+
 
 
 

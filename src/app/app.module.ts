@@ -44,6 +44,8 @@ import { OrderComponent } from './components/order/order.component';
 import { SellerOrderComponent } from './sellers/seller-order/seller-order.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { AddressComponent } from './components/address/address.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { PaymentComponent } from './components/payment/payment.component';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
 // import { CarouselModule } from '@coreui/angular';
@@ -83,6 +85,8 @@ import { AddressComponent } from './components/address/address.component';
     SellerOrderComponent,
     WishlistComponent,
     AddressComponent,
+    NotfoundComponent,
+    PaymentComponent,
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

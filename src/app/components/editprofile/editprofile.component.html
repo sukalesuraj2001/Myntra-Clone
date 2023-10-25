@@ -1,73 +1,151 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto">
-            <form class="example-form mt-4 p-4" (ngSubmit)="formsubmit(profileForm.value)" [formGroup]="profileForm">
-                <h2 class="text-center mb-4">Edit Your Myntra Profile</h2>
-                
-                <!-- Myntra Logo -->
+            <form class="example-form mt-4 p-4" *ngIf="!editMode" (ngSubmit)="formsubmit(profileForm.value)"
+                [formGroup]="profileForm">
+                <h2 class="text-center mb-4">Create Your Myntra Profile</h2>
+
                 <div class="text-center">
-                    <img src="https://entrackr.com/storage/2021/01/myntra-1-800x400.jpg" alt="Myntra Logo" style="width: 100px;">
+                    <img src="https://entrackr.com/storage/2021/01/myntra-1-800x400.jpg" alt="Myntra Logo"
+                        style="width: 100px;">
                 </div>
 
-                <!-- Myntra Banner (you can use an image or customize it as needed) -->
-              
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" class="form-control" formControlName="firstName">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" class="form-control" formControlName="lastName">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control" formControlName="firstName">
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="mobileNumber">Mobile Number</label>
-                            <input type="text" id="mobileNumber" class="form-control" formControlName="mobileNumber">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="email">Email Id</label>
-                            <input type="email" id="email" class="form-control" formControlName="email">
-                        </div>
-                    </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control" formControlName="lastName">
                 </div>
+
+                <div class="form-group">
+                    <label for="email">Email Id</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="text" id="mobileNumber" class="form-control" formControlName="mobileNumber">
+                </div>
+
                 <div class="form-group">
                     <label for="address1">Address</label>
-                    <textarea id="address1" class="form-control" formControlName="address1" placeholder="Ex. 100 Main St"></textarea>
+                    <textarea id="address1" class="form-control" formControlName="address1"
+                        placeholder="Ex. 100 Main St"></textarea>
                 </div>
+
                 <div class="form-group">
                     <label for="address2">Address 2</label>
                     <textarea id="address2" class="form-control" formControlName="address2"></textarea>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" class="form-control" formControlName="city" placeholder="Ex. San Francisco">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <input type="text" id="state" class="form-control" formControlName="state" placeholder="Ex. California">
-                        </div>
-                    </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" class="form-control" formControlName="city"
+                        placeholder="Ex. San Francisco">
                 </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" class="form-control" formControlName="state"
+                        placeholder="Ex. California">
+                </div>
+
                 <div class="form-group">
                     <label for="productImage">Profile Image</label>
-                    <input type="file" id="productImage" class="form-control" formControlName="image" accept="image/*" required="image">
+                    <input type="file" id="productImage" class="form-control" formControlName="image" accept="image/*"
+                        required="image">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mt-4">Save Changes</button>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">Create Profile</button>
+                <button class="btn btn-secondary" (click)="toggleEditForm()">Edit Profile</button>
             </form>
+
+            <form class="example-form mt-4 p-4" *ngIf="editMode" (ngSubmit)="updateProfile(updateProfiles.value)"
+                [formGroup]="updateProfiles">
+                <h2 class="text-center mb-4">Edit Your Myntra Profile</h2>
+
+                <div class="form-group">
+                    <label for="editFirstName">First Name</label>
+                    <input type="text" id="editFirstName" [(ngModel)]="data.firstName" formControlName="firstName"
+                        name="editFirstName" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="editLastName">Last Name</label>
+                    <input type="text" id="editLastName" [(ngModel)]="data.lastName" formControlName="lastName"
+                        name="editLastName" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="editEmail">Email Id</label>
+                    <input type="email" id="editEmail" [(ngModel)]="data.email" name="editEmail" formControlName="email"
+                        class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="editMobileNumber">Mobile Number</label>
+                    <input type="text" id="editMobileNumber" [(ngModel)]="data.mobileNumber"
+                        formControlName="mobileNumber" name="editMobileNumber" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="editAddress1">Address</label>
+                    <textarea id="editAddress1" [(ngModel)]="data.address1" formControlName="address1"
+                        name="editAddress1" class="form-control" placeholder="Ex. 100 Main St"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="editAddress2">Address 2</label>
+                    <textarea id="editAddress2" [(ngModel)]="data.address2" formControlName="address2"
+                        name="editAddress2" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="editCity">City</label>
+                    <input type="text" id="editCity" [(ngModel)]="data.city" formControlName="city" name="editCity"
+                        class="form-control" placeholder="Ex. San Francisco">
+                </div>
+
+                <div class="form-group">
+                    <label for="editState">State</label>
+                    <input type="text" id="editState" [(ngModel)]="data.state" formControlName="state" name="editState"
+                        class="form-control" placeholder="Ex. California">
+                </div>
+
+                <div class="form-group">
+                    <label for="editImage">Profile Image</label>
+                    <input type="text" id="editImage" name="editImage" formControlName="image" class="form-control"
+                        accept="image/*" required="image" placeholder="Add Profile Image URL">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">Save Changes</button>
+                <button class="btn btn-secondary" (click)="toggleEditForm()">Cancel</button>
+            </form>
+
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<!-- 
+<div>
+    <button (click)="selectMenu('overview')">Overview</button>
+    <button (click)="selectMenu('profile')">Profile</button>
+    <button (click)="selectMenu('editprofile')">Edit Profile</button>
+  </div>
+  
+  <div>
+    <div *ngIf="menuOption === 'overview'">dummy 334 text for Overview</div>
+    <div *ngIf="menuOption === 'profile'">dummy 334 text for Profile</div>
+    <div *ngIf="menuOption === 'editprofile'">dummy 334 text for Edit Profile</div>
+  </div>
+   -->

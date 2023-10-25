@@ -98,64 +98,21 @@
         </div>
       </div>
 
-      <!-- <div class="product-details my-2">
-        <div class="customer-address ">
 
-          <div class="container-address">
-            <p type="button" class="text-danger" (click)="toggleCollapse()">Add New Address</p>
-            <div [ngClass]="{'collapse': isCollapsed, 'show': !isCollapsed}">
-              <form>
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
-
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state" required>
-
-                <label for="zipcode">Zip Code:</label>
-                <input type="text" id="zipcode" name="zipcode" required>
-
-                <button type="submit">Save Address</button>
-              </form>
-            </div>
-          </div>
-
-        </div>
-        <div class="product-detail mt-4 ms-3">
-          <p class="fw-bold"></p>
-          <p></p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="product-detail me-3">
-          <span><i class="bi bi-x"></i></span>
-        </div>
-      </div> -->
 
 
 
 
     </div>
-    <div class="col-md-4 ">
-     <div class="estimate">
-      <p class="mt-3">DELIVERY ESTIMATES</p>
-     </div>
+    <div class="col-md-4 " *ngFor="let x of data">
+      <div class="estimate">
+        <p class="mt-3">DELIVERY ESTIMATES</p>
+      </div>
       <div class="coupon-container">
         <div class="coupon-section">
           <div class="d-flex align-items-center">
-           <img [src]="productImage" alt="">
-            <p> Estimated delivery by &nbsp;  <b>{{productName | date: 'd MMM , y'}}</b></p><br>
+            <img [src]="productImage" alt="">
+            <p> Estimated delivery by &nbsp; <b>{{productName | date: 'd MMM , y'}}</b></p><br>
           </div>
           <div class="price-details mt-5">
             <p class="fw-bold">Price Details({{counter}}items)</p>
@@ -165,12 +122,13 @@
             <p>Total Amount: <b>{{(totalprice -(totalprice*discount/100))+shipping | currency:"INR"}}</b> </p>
           </div>
         </div>
-        <!-- {{(totalmrp -(totalmrp*(discount/100)) + shipping) | currency: "INR"}} -->
       </div>
- 
+
+
+
       
+        <button  type="submit" id="btn" class="mt-2" (click)="placeOrder(x)">PLACE ORDER</button>
       
-      <button type="submit" id="btn" class="mt-2">PLACE ORDER</button>
     </div>
   </div>
 </div>
