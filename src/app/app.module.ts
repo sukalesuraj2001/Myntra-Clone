@@ -37,7 +37,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EthenticWearComponent } from './products/ethentic-wear/ethentic-wear.component';
 import { AddProductComponent } from './sellers/add-product/add-product.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { EditprofileComponent } from './components/editprofile/editprofile.component';
+// import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { AboutComponent } from './components/about/about.component';
 import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
 import { OrderComponent } from './components/order/order.component';
@@ -46,6 +46,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { AddressComponent } from './components/address/address.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { AuthModule } from './auth/auth.module';
 // import { DashboardComponent } from './sellers/dashboard/dashboard.component';
 // import { HeaderComponent } from './sellers/header/header.component';
 // import { CarouselModule } from '@coreui/angular';
@@ -66,27 +67,28 @@ import { PaymentComponent } from './components/payment/payment.component';
     AppComponent,
     NavbarComponent,
     ProductsComponent,
-    RatingComponent,
-    RegisterComponent,
-    LoginComponent,
+    // RatingComponent,
+    // RegisterComponent,
+    // LoginComponent,
     FooterComponent,
     CrouselComponent,
-    CartComponent,
+    // CartComponent,
     ProductDetailsComponent,
     HomeComponent,
     SellerRegisterComponent,
-    EthenticWearComponent,
+    // EthenticWearComponent,
     AddProductComponent,
-    ProfileComponent,
-    EditprofileComponent,
-    AboutComponent,
+    // ProfileComponent,
+    // EditprofileComponent,
+    // AboutComponent,
     AllCustomersComponent,
-    OrderComponent,
+    // OrderComponent,
     SellerOrderComponent,
-    WishlistComponent,
-    AddressComponent,
+    // WishlistComponent,
+    // AddressComponent,
     NotfoundComponent,
-    PaymentComponent,
+    // PaymentComponent,
+    
     // DashboardComponent,
     // HeaderComponent,
     // CasualWearComponent,

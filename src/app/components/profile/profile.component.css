@@ -74,6 +74,31 @@ img {
 .col-md-3:hover {
   background-color: #f3f3f3;
 }
+/* Reset default Bootstrap margin for columns */
+.icon-column {
+  margin: 0;
+}
+
+/* Style the icon */
+.icon-column i {
+  font-size: 2rem; /* Adjust the icon size as needed */
+  color: #333; /* Change the icon color */
+}
+
+/* Style the headings */
+.icon-column b {
+  font-size: 1.5rem; /* Adjust the heading size as needed */
+  margin-top: 10px; /* Add space between icon and heading */
+  color: #333; /* Change the heading color */
+}
+
+/* Style the description */
+.icon-column p {
+  font-size: 1rem; /* Adjust the description size as needed */
+  margin-top: 5px; /* Add space between heading and description */
+  color: #666; /* Change the description color */
+}
+
 
 .col-md-3 span i {
   font-size: 1.5rem;

@@ -1,4 +1,7 @@
 export class Order {
+  forEach(arg0: (order: any, index: any) => void) {
+    throw new Error('Method not implemented.');
+  }
   purchaseDate: string = '';
   userDetails: object = {};
   orderID: number = 0;

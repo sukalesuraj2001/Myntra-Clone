@@ -397,14 +397,16 @@
               <!-- <li><a class="dropdown-item text-black">Hello {{search}}</a></li> -->
              <p class="dropdown-item text-black fw-bold">Hello {{search}}</p>
              <hr>
-              <li><a class="dropdown-item text-black"routerLink="profile">Account</a></li>
-              <li><a class="dropdown-item text-black"routerLink="/about">About</a></li>
-              <li><li><a class="dropdown-item text-black"routerLink="register">Login</a></li>
+              <li><a class="dropdown-item text-black"routerLink="dashboard/profile">Account</a></li>
+              <li><a class="dropdown-item text-black"routerLink="dashboard/about">About</a></li>
+              <li><li><a class="dropdown-item text-black"routerLink="user/register">Login</a></li>
               <li>
-                <a class="dropdown-item text-black" routerLink="#" (click)="logout()">Logout</a>
+                <a class="dropdown-item text-black" (click)="logout()">Logout</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-black" routerLink="sellerregister">Seller</a>
+              </li> <li class="nav-item">
+                <a class="nav-link text-black" routerLink="dashboard/order">Orders</a>
               </li>
               
             
@@ -416,11 +418,11 @@
 
 
           
-          <a class="btn position-relative " routerLink="buy-now/:id">
+          <a class="btn position-relative " routerLink="dashboard/wishlist">
             <i class="bi bi-heart"></i> <br>
-            <p class="icon-txt" routerLink="/wishlist"> Wishlist</p>
+            <p class="icon-txt" routerLink="dashboard/wishlist"> Wishlist</p>
           </a>
-          <a class="btn position-relative" routerLink="cart" (click)="getCartCount();">
+          <a class="btn position-relative" routerLink="dashboard/cart" (click)="getCartCount();">
             <i class="bi bi-bag"></i> <br>
             <p class="icon-txt"> Bag</p>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

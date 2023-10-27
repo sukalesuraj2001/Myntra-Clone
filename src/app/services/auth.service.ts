@@ -17,8 +17,8 @@ export class AuthService {
     return this.http.post<Register>(`${this.apiUrl}/User`, userData);
   }
 
-  userLogin(userData: any) {
-    return this.http.get(`${this.apiUrl}/User`, userData);
+  userLogin(userData: any):Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/User`, userData);
   }
   // user login and registration Api end
 

@@ -28,13 +28,16 @@ cartItem: any[] = [];
 counter:number=0
 user:any;
 users:any;
+userId:any
 address:any;
   cartItems: Product[] = [];
   totalPrice:Product[]=[];
   totalmrp:any
   amount: any;
 
-  constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService,private auth:AuthService) {}
+  constructor(private cartService: CartService,private ps1:ProductService,private router:Router,private orderservice:PlaceOrderService,private auth:AuthService,private order:PlaceOrderService) {
+ 
+  }
 
 ngOnInit(cartdata:Cart): void {
   
@@ -48,7 +51,7 @@ ngOnInit(cartdata:Cart): void {
     })
    
 
-
+ 
 
   this.cartService.getCart(cartdata as Cart).subscribe((res: any) => {
     const entries = Object.entries(res);
@@ -63,7 +66,7 @@ this.updateSelectedItemCount();
 
 
 
-
+this.userId=localStorage.getItem("userId")
 this.user=localStorage.getItem("userName")
 this.address=localStorage.getItem("address")
 
@@ -73,7 +76,7 @@ this.address=localStorage.getItem("address")
     this.cartItems=result
    
     
-    this.router.navigate(['cart'])
+    this.router.navigate(['dashboard/cart'])
     
   })
   
@@ -109,7 +112,7 @@ remove(item: Product) {
   this.cartService.removeCart(item.id).subscribe(
     (result) => {
     alert("product deleted successfully!")
-    window.location.reload()
+    // window.location.reload()
       const index = this.cartItems.findIndex((cartItem) => cartItem.id === item.id);
       if (index !== -1) {
         this.cartItems.splice(index, 1);
@@ -134,7 +137,6 @@ selectQuantity(quantity: number) {
 placeOrder() {
   const selectedItems = this.cartItems.filter(cartItem => cartItem.selected);
 
-  // Check if there are selected items in the cart
   if (selectedItems.length === 0) {
     alert("Please select products in the cart before placing an order.");
     return; 
@@ -149,7 +151,14 @@ placeOrder() {
 
   this.amount = totalAmount - (totalAmount * (this.discount / 100)) + 40;
 
+  // Check if userDetails is empty
+  if (this.users.length === 0) {
+    alert("User details are empty. Please fill in user details before placing an order.");
+    return;
+  }
+
   const orderData = {
+    userId: this.userId,
     purchaseDate: this.date,
     userDetails: this.users,
     orderID: orderID,
@@ -159,7 +168,7 @@ placeOrder() {
 
   this.orderservice.orderProduct(orderData).subscribe(() => {
     alert("Order placed successfully!");
-    this.router.navigate(['/address'])
+    this.router.navigate(['dashboard/payment']);
   });
 }
 

@@ -51,7 +51,7 @@
 
             <div class="row">
                 <div class="col-4 mt-5">
-                    <a href="#" class="btn myntra-button" (click)="addToCart(result)">
+                    <a  class="btn myntra-button" (click)="addToCart(result)">
                         <span class="me-3"><i class="bi bi-bag"></i></span>ADD TO BAG
                     </a>
                 </div>
@@ -72,6 +72,7 @@
 
             <div class="delivery-option mt-3">
                 <p class="fw-medium">DELIVERY OPTIONS &nbsp;<i class="bi bi-truck"></i></p>
+                <p>Check That When Your Product Is Arrive In Your Address</p>
                 <div class="search-container">
                   <input type="text" id="locationInput" placeholder="PINCODE">
                   <i class="bi bi-search search-icon" (click)="lookupLocation()"></i>
@@ -139,7 +140,7 @@
                         <p id="desc">{{x.description}}</p>
                         <p class="fw-bold">{{x.price | currency:"INR"}}</p>
 
-                        <app-rating [rate]="x.rating"></app-rating>
+                        <!-- <app-rating [rate]="x.rating"></app-rating> -->
                         <!-- <a href="#" (click)="greet(x);" class="btn btn-danger" (click)="addToCart()">Add to cart</a> -->
 
 

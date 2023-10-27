@@ -31,9 +31,15 @@ export class AddressComponent {
     private order: PlaceOrderService,
     private router: Router
   ) {}
-  ngOnInit(data: Profile): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+  ngOnInit(data: Profile,data1:Order): void {
+   
+
+      //  setTimeout(() => {
+      //   this.order.removeOrder(data1).subscribe((res) => {
+      //     alert("product remove successfully")
+      //      });
+      //  }, 15000);
+
     this.username = localStorage.getItem('userName') ?? '';
     // this.address=localStorage.getItem("address")?? "";
     this.auth.getProfile(data as Profile).subscribe((res) => {
@@ -106,12 +112,8 @@ export class AddressComponent {
 
     console.log('the data is' + JSON.stringify(data.id));
 
-    setTimeout(() => {
-      this.order.removeOrder(data).subscribe((res) => {
-     alert("product remove successfully")
-      });
-      this.router.navigate(['/payment'])
-    }, 5000);
-
+   
+    this.router.navigate(['/payment'])
+    
   }
 }

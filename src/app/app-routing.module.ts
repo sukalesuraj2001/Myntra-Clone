@@ -10,7 +10,7 @@ import { SellerRegisterComponent } from './sellers/seller-register/seller-regist
 import { EthenticWearComponent } from './products/ethentic-wear/ethentic-wear.component';
 import { AddProductComponent } from './sellers/add-product/add-product.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { EditprofileComponent } from './components/editprofile/editprofile.component';
+// import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { AboutComponent } from './components/about/about.component';
 import { AllCustomersComponent } from './sellers/all-customers/all-customers.component';
 import { OrderComponent } from './components/order/order.component';
@@ -23,18 +23,30 @@ import { PaymentComponent } from './components/payment/payment.component';
 
 
 const routes: Routes = [
+
+  // {path:'user',loadChildren:()=>import('./auth/auth.module').then(mod=>mod.AuthModule)},
+  {path:'dashboard',loadChildren:()=>import('./components/components.module').then(mod=>mod.ComponentsModule)},
+  {path:'user',loadChildren:()=>import('./auth/auth.module').then(mod=>mod.AuthModule)},
+
+
+
+
+
+
   { path: '', component: ProductsComponent },
-  { path: 'cart', component: CartComponent, canActivate: [AuthGuard], title: ' SHOPPING BAG' },
+  // { path: 'cart', component: CartComponent, canActivate: [AuthGuard], title: ' SHOPPING BAG' },
   {
     path: 'Productdetails',
     component: ProductDetailsComponent,
     title: 'Myntra | Product Details',
   },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    title: 'Myntra | Register',
-  },  {
+  // {
+  //   path: 'register',
+  //   component: RegisterComponent,
+  //   title: 'Myntra | Register',
+  // }, 
+  
+   {
     path: 'sellerhome',
     component: HomeComponent,
     title: 'Myntra | sellerhome',
@@ -42,58 +54,71 @@ const routes: Routes = [
     path: 'sellerregister',
     component: SellerRegisterComponent,
     title: 'Myntra | sellerhome',
-  }, {
-    path: 'ethenticWear',
-    component: EthenticWearComponent,
-    title: 'Myntra | sellerhome',
-  },{
+  },
+  //  {
+  //   path: 'ethenticWear',
+  //   component: EthenticWearComponent,
+  //   title: 'Myntra | sellerhome',
+  // },
+  
+  {
     path: 'addProduct',
     component: AddProductComponent,
     title: 'Myntra | sellerhome',
-  },{
-    path: 'profile',
-    component: ProfileComponent,
-    title: 'Myntra | profile',
-  }, {
-    path: 'editprofile',
-    component: EditprofileComponent,
-    title: 'Myntra | Edit-Profile',
-  },{
-    path: 'about',
-    component: AboutComponent,
-    title: 'Myntra | About Us',
-  }, {
+  },
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent,
+  //   title: 'Myntra | profile',
+  // }, 
+  
+  // {
+  //   path: 'editprofile',
+  //   component: EditprofileComponent,
+  //   title: 'Myntra | Edit-Profile',
+  // },
+  // {
+  //   path: 'about',
+  //   component: AboutComponent,
+  //   title: 'Myntra | About Us',
+  // },
+  
+  {
     path: 'customer',
     component: AllCustomersComponent,
     title: 'Myntra | customer',
-  },{
-    path: 'order',
-    component: OrderComponent,
-    title: 'Myntra | order',
-  }, {
+  },
+  // {
+  //   path: 'order',
+  //   component: OrderComponent,
+  //   title: 'Myntra | order',
+  // },
+  
+  {
     path: 'sellerOrder',
     component: SellerOrderComponent,
     title: 'Myntra | sellerOrder',
-  }, {
+  }, 
+  {
     path: 'Product/:id',
     component: ProductDetailsComponent,
     title: 'Myntra | product-detail',
   },
-  {
-    path: 'wishlist',
-    component: WishlistComponent,
-    title: 'Myntra | Wishlist',
-  },
-  {
-    path: 'payment',
-    component: PaymentComponent,
-    title: 'Myntra |payment',
-  },
-  {
-    path: 'address', 
-    component: AddressComponent,
-    title: 'Myntra | Address',
-  },
+  // {
+  //   path: 'wishlist',
+  //   component: WishlistComponent,
+  //   title: 'Myntra | Wishlist',
+  // },
+  // {
+  //   path: 'payment',
+  //   component: PaymentComponent,
+  //   title: 'Myntra |payment',
+  // },
+  // {
+  //   path: 'address', 
+  //   component: AddressComponent,
+  //   title: 'Myntra | Address',
+  // },
   {
     path: '**',
     component: NotfoundComponent,
@@ -102,7 +127,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
